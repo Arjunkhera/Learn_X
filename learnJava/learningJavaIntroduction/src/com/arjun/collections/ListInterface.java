@@ -48,5 +48,15 @@ public class ListInterface {
 
         Objects.equals(numbers, List.of(1, 2, 3)); // true
     }
+
+    public void convertingArrayToList() {
+        Integer[] arr = new Integer[]{1,2,3};
+        // This just allows us to access arr through list interface
+        // the backing is still the same, the array cannot be resized
+        List<Integer> converted = Arrays.asList(arr);
+
+        // the following would give error since converted is immutable
+        // converted.add(3);
+    }
 }
 

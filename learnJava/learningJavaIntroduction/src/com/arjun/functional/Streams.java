@@ -1,6 +1,5 @@
 package com.arjun.functional;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
@@ -24,6 +23,7 @@ public class Streams {
         Stream<Double> doubleStream = Arrays.stream(new Double[]{ 1.01, 1d, 0.99, 1.02, 1d, 0.99 });
 
         Stream<String> persons = Stream.of("John", "Demetra", "Cleopatra");
+        IntStream intStream = IntStream.of(1,2,3);
 
         Stream<String> stream1 = Stream.of(/* some values */);
         Stream<String> stream2 = Stream.of(/* some values */);

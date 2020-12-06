@@ -10,10 +10,44 @@ public class Main {
     }
 
     public static void testing()  {
-        String[] arr = "My name is Arjun      Khera   gg".split("\\s+");
-        for(String str : arr) {
-            System.out.println(str);
+        String path = "SourceFiles/Test.md";
+        System.out.println(path.substring(path.lastIndexOf("/")+1));
+    }
+
+    public static List<Integer> findStringAnagrams(String str, String pattern) {
+        List<Integer> resultIndices = new ArrayList<Integer>();
+        // TODO: Write your code here
+        if(str.isEmpty() || pattern.isEmpty() || pattern.length() > str.length()) return resultIndices;
+
+        Map<Character, Integer> store = new HashMap<>();
+        for(char ch : pattern.toCharArray()) {
+            store.put(ch, store.getOrDefault(ch, 0) + 1);
         }
+
+        int startIndex = 0;
+        int matched = 0;
+        for(int i = 0; i < str.length(); i++) {
+            char rightChar = str.charAt(i);
+
+            if(store.containsKey(rightChar)) {
+                store.put(rightChar, store.get(rightChar) - 1);
+                if(store.get(rightChar).equals(0)) matched += 1;
+            }
+
+            if(matched == store.size()) {
+                resultIndices.add(startIndex);
+            }
+
+            if(i >= pattern.length() - 1) {
+                char leftChar = str.charAt(startIndex++);
+                if(store.containsKey(leftChar)) {
+                    if(store.get(leftChar).equals(0)) matched -= 1;
+                    store.put(leftChar, store.get(leftChar) + 1);
+                }
+            }
+        }
+
+        return resultIndices;
     }
 
     public static void getProductNames() {

@@ -35,7 +35,7 @@ console.log(constantName);
 // need to initialise with a value
 // const greeting;
 
-// const objects can be changes but not reassigned
+// const objects can be changed but not reassigned
 const person = {
     name: "ram",
     age: "12"

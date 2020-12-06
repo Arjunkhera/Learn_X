@@ -1,5 +1,6 @@
 package com.arjun.functional.examples;
 
+import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
 public class Prime {
@@ -13,7 +14,7 @@ public class Prime {
     }
 
     private static boolean isPrimeSecond(long number) {
-        return LongStream.rangeClosed(2, (long) Math.floor(Math.sqrt(number)))
+        return IntStream.rangeClosed(2, (int) Math.sqrt(number))
                 .noneMatch(i -> number % i == 0);
     }
 }

@@ -5,7 +5,7 @@ import com.arjun.collections.examples.PlayerRankingComparator;
 
 import java.util.*;
 
-public class Sorting {
+public class ComparableIntroduction {
 
     public static void main(String[] args) {
         List<Player> footballTeam = new ArrayList<>();
@@ -44,6 +44,5 @@ public class Sorting {
         Comparator<Player> rankingComparator = (p1, p2) -> p1.getRanking() - p2.getRanking();
         // another example, but with method reference
         Comparator<Player> ageComparator = Comparator.comparing(Player::getAge);
-
     }
 }
