@@ -1,13 +1,11 @@
-package com.arjun.introduction;
+package com.arjun.learn.basics;
 
 public class Strings {
-
     public static void main(String[] args) {
 
-        introduction();
-        System.out.println("-----------");
+        //Integer.toBinaryString();
 
-        commonMethods();
+        introduction();
         System.out.println("-----------");
 
         stringsAndChars();
@@ -48,26 +46,6 @@ public class Strings {
         System.out.println(second.equalsIgnoreCase(secondInUpperCase)); // true, it ignores cases
     }
 
-    public static void commonMethods() {
-        String testString = "testing 123";
-
-        System.out.println("Length of string : " + testString.length());
-        System.out.println("Character at index : " + testString.charAt(3));
-
-        String anotherTestString = "abc def ghi";
-
-        System.out.println(anotherTestString.isEmpty());
-
-        System.out.println(anotherTestString.toUpperCase());
-        System.out.println(anotherTestString.toLowerCase());
-
-        System.out.println(anotherTestString.startsWith("abc"));
-        System.out.println(anotherTestString.endsWith("gh"));
-
-        System.out.println(anotherTestString.contains("def"));
-        System.out.println(anotherTestString.substring(3,7));
-        System.out.println(anotherTestString.replace("de","yz"));
-    }
 
     public static void stringsAndChars() {
         char[] charArray = {'A','B','C'};

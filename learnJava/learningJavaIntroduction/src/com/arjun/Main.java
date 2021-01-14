@@ -2,17 +2,66 @@ package com.arjun;
 
 import java.io.*;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
 
     public static void main(String[] args) {
-        testing();
+
     }
 
     public static void testing()  {
-        String path = "SourceFiles/Test.md";
-        System.out.println(path.substring(path.lastIndexOf("/")+1));
+        String abc = "abc";
+
     }
+
+    Set<String> result = new HashSet<>();
+    Character middle = null;
+
+    public List<String> generatePalindromes(String s) {
+
+        Map<Character, Integer> store = new HashMap<>();
+        for(Character ch : s.toCharArray()) {
+            store.put(ch, store.getOrDefault(ch, 0) + 1);
+        }
+
+        boolean isOdd = s.length() % 2 != 0;
+        List<Character> characters = new ArrayList<>();
+
+        for(Map.Entry<Character, Integer> entry : store.entrySet()) {
+            if(entry.getValue() % 2 == 1) {
+                if(!isOdd) {
+                    return new ArrayList<>();
+                } else {
+                    isOdd = false;
+                    middle = entry.getKey();
+                }
+            }
+
+            for(int i = 0; i < entry.getValue()/2; i++) {
+                characters.add(entry.getKey());
+            }
+        }
+
+        solve(characters, 0);
+        return new ArrayList<>(result);
+    }
+
+    public void solve(List<Character> str, int index) {
+        if(index == str.size()) {
+            String left = str.toString();
+            if(middle != null) left += middle;
+            left += new StringBuilder(left).reverse().toString();
+            result.add(left);
+        }
+
+        for(int i = index; i < str.size(); i++) {
+            Collections.swap(str, index, i);
+            solve(str, index + 1);
+            Collections.swap(str, index, i);
+        }
+    }
+
 
     public static List<Integer> findStringAnagrams(String str, String pattern) {
         List<Integer> resultIndices = new ArrayList<Integer>();
