@@ -4,10 +4,10 @@ import java.util.*;
 
 public class QueueExample {
     public static void main(String[] args) {
-        deque();
-        dequeAsStack();
+        //deque();
+        //dequeAsStack();
         priorityQueue();
-        priorityQueueCustomComparator();
+        //priorityQueueCustomComparator();
     }
 
     public static void deque() {
@@ -45,29 +45,32 @@ public class QueueExample {
     }
 
     public static void priorityQueue() {
-        PriorityQueue<Integer> intQ = new PriorityQueue<>();
+        // Min Heap
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>((x,y) -> -1*Integer.compare(x,y));
+        // Max Heap
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((x,y) -> -1*Integer.compare(x,y));
+        
         // offer() and add() are used to add elements
-
-        intQ.add(51);
-        intQ.offer(6);
-        intQ.add(72);
-        intQ.add(1);
-        intQ.add(2);
-        intQ.offer(3);
-        intQ.offer(4);
-        intQ.add(11);
-        intQ.add(19);
+        maxHeap.add(51);
+        maxHeap.offer(6);
+        maxHeap.add(72);
+        maxHeap.add(1);
+        maxHeap.add(2);
+        maxHeap.offer(3);
+        maxHeap.offer(4);
+        maxHeap.add(11);
+        maxHeap.add(19);
 
         System.out.println("Elements in this queue are: ");
-        System.out.println(intQ);
+        System.out.println(maxHeap);
 
         // printing size of the queue
-        System.out.println("Size of this queue is: " + intQ.size());
+        System.out.println("Size of this queue is: " + maxHeap.size());
 
         // removing values based on priority and printing them
         System.out.println("Priority Queue:");
-        while(!intQ.isEmpty()){
-            System.out.println(intQ.remove());
+        while(!maxHeap.isEmpty()){
+            System.out.println(maxHeap.remove());
         }
 
     }
@@ -75,7 +78,6 @@ public class QueueExample {
     public static void priorityQueueCustomComparator() {
         // Min Heap of euclidean distance
         PriorityQueue<int[]> euclideanDistances = new PriorityQueue<>((p1, p2) -> p1[0]*p1[0] + p1[1]*p1[1] - p2[0]*p2[0] - p2[1]*p2[1]);
-
         // normal queue operations
     }
 }
