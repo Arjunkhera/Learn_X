@@ -4,9 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class App {
     public static void main( String[] args ) throws IOException {
@@ -18,7 +16,7 @@ public class App {
 //        System.out.println(Character.isLetterOrDigit(first));
 //        System.out.println(Character.isLetterOrDigit(second));
 
-        // testing();
+        testing();
     }
 
     public static void commonStringFunctions() {
@@ -83,6 +81,10 @@ public class App {
         System.out.println("Third conversion method : " + convertedStringThird);
     }
 
-    public static void testing(int[] source, int[][] allowedSwaps) {
+    public static void testing() {
+        int[] first = new int[3];
+
+        int[] second = new int[first];
+
     }
 }

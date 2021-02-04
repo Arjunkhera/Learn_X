@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Introduction</title>
+    <link rel="stylesheet" href="selectorsIntroduction.css" type="text/css">
+</head>
+<body>
+
+    <!-- CSS Selectors basics -->
+    <h1>Styled through element selector</h1>
+    <p class="info">Class Selector</p>
+    <p id="warning">Id Selector !!</p>
+    <p class="info">Class Selector</p>
+    <p class="primary">Grouped Selector</p>
+    <hr>
+
+    <!-- CSS Selectors in Depth -->
+    <div>
+        <h1>DIV: Header 1</h1>
+        <h1>DIV: Header 2</h1>
+    </div>
+    <section>
+        <h1>Descendant Selector 1</h1>
+        <h1>Descendant Selector 2</h1>
+        <p>Last Child : Styled Orange</p>
+    </section>
+
+    <a href="https://www.google.com">Pseudo Class Selectors for link element</a>
+    <hr>
+
+    <!-- Child Selectors -->
+    <div>
+        <span>
+            <p>First Child: Styled Violet</p>
+            <p>Last Child : Styled Orange</p>
+        </span>
+        <ul class='first-list'>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+        <ul>
+            <li>Only Child</li>
+        </ul>
+    </div>
+    <div>
+        <span>
+            <p>First Child: Styled Violet</p>
+            <p>Last Child : Styled Orange</p>
+        </span>
+        <ul class='second-list'>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+        </ul>
+    </div>
+</body>
+</html>

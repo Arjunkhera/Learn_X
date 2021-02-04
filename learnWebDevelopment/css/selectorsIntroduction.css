@@ -1,0 +1,78 @@
+/** Element Selector **/
+body {
+    background-color: white;
+}
+
+h1 {
+    color: green;
+}
+
+hr {
+    border-top: 1px dashed red;
+}
+
+/** Class Selector **/
+.info {
+    color: green;
+}
+
+.primary {
+    color: white;
+}
+
+/** Id Selector **/
+#warning {
+    color: red;
+}
+
+/** Grouping Selectors **/
+.info,
+.primary {
+    background-color: blue;
+}
+
+/** Descendant Selector **/
+div h1,
+div h2 {
+    color: red;
+}
+
+/** Pseudo Selectors **/
+a:link {
+    color: #0000ff;
+}
+a:visited {
+  color: #ff00ff;
+}
+a:hover {
+  color: #00ccff;
+}
+a:active {
+  color: #ff0000;
+}
+
+/** Child Selectors **/
+
+/** with parent **/
+span p:first-child {
+    color: violet;
+}
+
+/** For any last child that is a p element **/
+p:last-child {
+    color: orange;
+}
+
+/** Only Child **/
+li:only-child {
+    color: green;
+}
+
+li:nth-child(4) {
+    color: red
+}
+
+.second-list li:nth-child(odd) {
+    color: blue
+}
+
