@@ -68,11 +68,27 @@ li:only-child {
     color: green;
 }
 
+/** nth child **/
 li:nth-child(4) {
     color: red
 }
 
+/** variations of nth child **/
 .second-list li:nth-child(odd) {
-    color: blue
+    color: blue;
+    background-color: lightgray;
 }
 
+/** using attributes **/
+[data-attr] {
+    background-color:lightblue;
+}
+
+/** Difference between descendant and nested selectors **/
+div p {
+    color: red !important;
+}
+
+div > p {
+    background-color: lightgray !important;
+}

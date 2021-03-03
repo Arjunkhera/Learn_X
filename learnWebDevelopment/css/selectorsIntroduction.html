@@ -37,12 +37,12 @@
             <p>Last Child : Styled Orange</p>
         </span>
         <ul class='first-list'>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
+            <li data-attr="sample data tag">1</li>
+            <li data-attr="sample data tag">2</li>
+            <li data-attr="sample data tag">3</li>
+            <li data-attr="sample data tag">4 nth child red</li>
+            <li data-attr="sample data tag">5</li>
+            <li data-attr="sample data tag">6</li>
         </ul>
         <ul>
             <li>Only Child</li>
@@ -54,14 +54,23 @@
             <p>Last Child : Styled Orange</p>
         </span>
         <ul class='second-list'>
-            <li>1</li>
+            <li>1 odd child blue, background grey</li>
             <li>2</li>
-            <li>3</li>
+            <li>3 odd child blue, background grey</li>
             <li>4</li>
-            <li>5</li>
+            <li>5 odd child blue, background grey</li>
             <li>6</li>
-            <li>7</li>
+            <li>7 odd child blue, background grey</li>
         </ul>
     </div>
+    <hr>
+
+    <!-- Difference between Descendant and Nested selectors -->
+    <div>
+        <p>Paragraph which is a direct descendant of div</p>
+        <article>
+          <p>Paragraph which is also a descendant of div but not direct</p>
+        </article>
+    </div>   
 </body>
 </html>

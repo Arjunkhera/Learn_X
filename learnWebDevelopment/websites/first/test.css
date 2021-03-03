@@ -1,0 +1,9 @@
+p:before {
+    content: "";
+    display: block;
+    background: "instagram.png" no-repeat;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0 6px 0 0;
+}

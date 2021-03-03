@@ -13,6 +13,7 @@ clearBtn.addEventListener('mousedown', runEvent);
 // Mouseup
 clearBtn.addEventListener('mouseup', runEvent);
 
+// The following fire when we the mouse moves in and out of the target element
 // MouseEnter
 card.addEventListener('mouseenter', runEvent);
 // Mouseleave
