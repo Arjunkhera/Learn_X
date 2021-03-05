@@ -1,7 +1,11 @@
-div.aboutClassSelectors>h1,div#aboutIdSelectors>h1{
-    border-bottom: 1px solid black;
-  }
-  
-div.aboutClassSelectors>p,div#aboutIdSelectors>p{
-    font-style: italic;
+input,
+.outer {
+  vertical-align: middle;
+  display: inline-block;
+  min-width: 3rem;
+  width: 5rem;
+}
+
+svg {
+  display: inline-flex;
 }
