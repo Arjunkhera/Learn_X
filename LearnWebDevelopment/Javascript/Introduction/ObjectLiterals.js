@@ -1,5 +1,5 @@
 // Two ways of declaring an object
-const objFirst = new Object{};
+// const objFirst = new Object{};
 const objSecond = {};
 
 const person = {
