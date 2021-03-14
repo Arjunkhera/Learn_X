@@ -1,0 +1,15 @@
+  body {
+    font-family: Verdana, Arial, sans-serif;
+    margin: 16px;
+  }
+
+  .image {
+    width: 120px;
+    height: 90px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border: 2px solid dimgray;
+    background-color: lightgreen;
+    float: left;
+    /* clear: left; */
+  }
