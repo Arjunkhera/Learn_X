@@ -1,0 +1,26 @@
+/* A=0, B=0, C=0 -> specificity = 0 */
+*
+
+/* A=0, B=0, C=1 -> specificity = 1 */
+li
+
+/* A=0, B=0, C=2 -> specificity = 2 */
+ul li
+
+/* A=0, B=0, C=3 -> specificity = 3 */
+ul ol+li
+
+/* A=0, B=1, C=1 -> specificity = 11 */
+h1 + *[href$='http:']
+
+/* A=0, B=1, C=3 -> specificity = 13 */
+ul ol li.spec
+
+/* A=0, B=2, C=1 -> specificity = 21 */
+li.spec.next
+
+/* A=1, B=0, C=0 -> specificity = 100 */
+#myTag
+
+/* A=1, B=0, C=1 -> specificity = 101 */
+#yourTag:not(foo)
