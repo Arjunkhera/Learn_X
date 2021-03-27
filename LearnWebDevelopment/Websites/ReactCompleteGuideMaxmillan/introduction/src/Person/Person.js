@@ -1,7 +1,8 @@
-const person = ({name, age}) => {
+const person = (props) => {
     return (
         <div>
-            <p>{name} : {age}</p>
+            <p>{props.name} : {props.age}</p>
+            <p>{props.children}</p>
         </div>
     );
 }

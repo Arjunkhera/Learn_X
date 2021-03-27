@@ -1,14 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
-import Person from './Person/Person';
+import {Component} from 'react';
+import MethodPassingApp from './Lectures/MethodPassing/MethodPassingApp';
+import ListsApp from './Lectures/WorkingWithLists/ListsApp';
 
-function App() {
-  return (
-    <div className="App">
-      <Person name="Arjun" age="24"/>
-      <Person name="Neishka" age="23"/>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <hr/>
+        <MethodPassingApp></MethodPassingApp>
+        <hr/>
+        <ListsApp></ListsApp>
+      </div>
+    );  
+  }
 }
 
 export default App;
