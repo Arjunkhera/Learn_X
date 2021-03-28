@@ -32,7 +32,7 @@ class MethodPassingApp extends Component {
             <div>
                 <h2>Method Passing and Two Way Binding</h2>
 
-                <div className="modify-name">
+                <div className="method modify-name">
                     {/* This is more expensive then bind */}
                     <button onClick={() => this.switchClickHandler("Description at")}>
                         Change Description

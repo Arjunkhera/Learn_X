@@ -1,13 +1,30 @@
 import { Component } from 'react';
-import ListPerson from './ListsPerson';
+import StyleReactPerson from './StyleReactPerson';
+// import Radium from 'radium';
+import styled from 'styled-components';
 
-class ListsApp extends Component {
+const StyledButton = styled.button`
+    background-color: ${props => props.alt ? 'red' : 'green' };
+    display: inline-block;
+    color: white;
+    font: inherit;
+    border: 1px solid blue;
+    padding: 8px;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: ${props => props.alt ? 'salmon' : 'lightgreen'};
+        color: black;
+    }
+`
+
+class StyleReact extends Component {
 
     state = {
         persons: [
-            {id: 'kajdks', firstname: 'Arjun', lastName: 'Khera', age: 24},
-            {id: 'lkcnes', firstname: 'Neishka', lastName: 'Srivastava', age: 23},
-            {id: 'kasjnn', firstname: 'Ayush', lastName: 'Jain', age: 24},
+            {id: 'xcvcxdks', firstname: 'Arjun', lastName: 'Khera', age: 24},
+            {id: 'lkcnesdf', firstname: 'Neishka', lastName: 'Srivastava', age: 23},
+            {id: 'kas93nsn', firstname: 'Ayush', lastName: 'Jain', age: 24},
         ],
         description: [
             "Dummy Description",
@@ -79,6 +96,21 @@ class ListsApp extends Component {
     }
 
     render() {
+        // Used by radium
+        // const style = {
+        //     backgroundColor: 'green',
+        //     display: 'inline-block',
+        //     color: 'white',
+        //     font: 'inherit',
+        //     border: '1px solid blue',
+        //     padding: '8px',
+        //     cursor: 'pointer',
+        //     ':hover': {
+        //         backgroundColor: 'lightgreen',
+        //         color: 'black'
+        //     },
+        // }
+
         let persons = null;
 
         if(this.state.showPersons) {
@@ -87,7 +119,7 @@ class ListsApp extends Component {
                     {
                         this.state.persons.map((person, index) => {
                             return (
-                                <ListPerson
+                                <StyleReactPerson
                                     name = {person.firstname}
                                     age = {person.age}
                                     click = {() => this.switchClickHandler(index)}
@@ -97,22 +129,46 @@ class ListsApp extends Component {
                                     key = {person.id}
                                 >
                                     {this.state.description[index]}
-                                </ListPerson>        
+                                </StyleReactPerson>        
                             );
                         })
                     }
                 </div>
             );
+
+            // Inline style used by radium
+            // style.backgroundColor = 'red';
+            // style[':hover'] = {
+            //     backgroundColor: 'salmon',
+            //     color: 'black'
+            // }
+        }
+
+        const classes = ['style'];
+        if (this.state.persons.length <= 2) {
+            classes.push('red');
+        }
+        if (this.state.persons.length <= 1) {
+            classes.push('bold');
         }
 
         return (
             <div>
-                <h2>List's and Conditionals</h2>
+                <h2>Styling React with CSS</h2>
 
-                <div className="list modify-name">
-                    <button onClick={this.togglePersonsHandler}>
-                        Change Description
-                    </button>
+                <p className={classes.join(' ')}>Number of persons in state {this.state.persons.length}</p>
+
+                <div className="modify-name">
+                    <StyledButton 
+                        alt={this.state.showPersons}
+                        onClick={this.togglePersonsHandler}>
+                            Change Description
+                    </StyledButton>
+                    {/* <button 
+                        style = {style}
+                        onClick={this.togglePersonsHandler}>
+                            Change Description
+                    </button> */}
                 </div>
                 
                 {persons}
@@ -121,4 +177,5 @@ class ListsApp extends Component {
     }
 }
 
-export default ListsApp;
+// export default Radium(StyleReact);
+export default StyleReact;
