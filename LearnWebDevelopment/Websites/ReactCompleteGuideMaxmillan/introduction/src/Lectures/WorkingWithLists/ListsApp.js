@@ -31,10 +31,29 @@ class ListsApp extends Component {
         });
     }
 
-    switchNameChange = (evt) => {
-        const index = evt.target.parentNode.id.split('-')[1];
+    switchNameChange = (evt, id) => {
+        // Method 1 : Using event handler 
+        // const index = evt.target.parentNode.id.split('-')[1];
+        // const persons = [...this.state.persons];
+        // persons[index].firstname = evt.target.value;
+
+        // this.setState({
+        //     persons
+        // });
+
+        // Method 2 : Obtain specific id being modified
+        const personIndex = this.state.persons.findIndex(p => {
+            return p.id === id;
+        });
+
+        // const person = Object.assign({}, this.state.persons[personIndex]);
+        const person = {
+            ...this.state.persons[personIndex]
+        };
+        person.name = evt.target.value;
+
         const persons = [...this.state.persons];
-        persons[index].firstname = evt.target.value;
+        persons[personIndex] = person;
 
         this.setState({
             persons
@@ -72,7 +91,7 @@ class ListsApp extends Component {
                                     name = {person.firstname}
                                     age = {person.age}
                                     click = {() => this.switchClickHandler(index)}
-                                    nameChange = {this.switchNameChange}
+                                    nameChange = {(evt) => this.switchNameChange(evt, person.id)}
                                     deleteCard = {() => this.deletePersonsHandler(index)}
                                     index = {index}
                                     key = {person.id}
