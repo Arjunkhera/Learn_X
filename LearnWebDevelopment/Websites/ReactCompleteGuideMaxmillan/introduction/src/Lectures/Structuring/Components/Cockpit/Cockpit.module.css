@@ -1,5 +1,12 @@
+.Cockpit .red {
+    color: red;
+}
 
-.StyleReact Button {
+.Cockpit .bold {
+    font-weight: bold;
+}
+
+.Cockpit Button {
     background-color: green;
     display: inline-block;
     color: white;
@@ -9,23 +16,15 @@
     cursor: pointer;
 }
 
-.StyleReact .red {
-    color: red;
-}
-
-.StyleReact .bold {
-    font-weight: bold;
-}
-
-.StyleReact Button:hover {
+.Cockpit Button:hover {
     background-color: lightgreen;
     color: black;
 }
 
-.StyleReact Button.Red {
+.Cockpit Button.Red {
     background-color: red;
 }
 
-.StyleReact Button.Red:hover {
+.Cockpit Button.Red:hover {
     background-color: salmon;
 }

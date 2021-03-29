@@ -115,7 +115,7 @@ class StyleReact extends Component {
         // }
 
         let persons = null;
-        let btnClass = '';
+        let btnClass = [styles.Button];
 
         if(this.state.showPersons) {
             persons = (                         
@@ -140,7 +140,7 @@ class StyleReact extends Component {
                 </div>
             );
 
-            btnClass = styles.Red;
+            btnClass.push(styles.Red);
             // Inline style used by radium
             // style.backgroundColor = 'red';
             // style[':hover'] = {
@@ -171,7 +171,7 @@ class StyleReact extends Component {
 
                 <div className="modify-name">
                     <button 
-                        className = {btnClass}
+                        className = {btnClass.join(' ')}
                         onClick={this.togglePersonsHandler}>
                             Change Description
                     </button>

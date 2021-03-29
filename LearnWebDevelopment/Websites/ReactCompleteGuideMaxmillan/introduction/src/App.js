@@ -3,12 +3,11 @@ import { Component } from 'react';
 import MethodPassingApp from './Lectures/MethodPassing/MethodPassingApp';
 import ListsApp from './Lectures/WorkingWithLists/ListsApp';
 import StyleReact from './Lectures/StylingReact/StyleReact';
-// import { StyleRoot } from 'radium'
+import StructureApp from './Lectures/Structuring/Containers/App';
 
 class App extends Component {
   render() {
     return (
-      // <StyleRoot>
         <div className="App">
           <hr/>
           <MethodPassingApp></MethodPassingApp>
@@ -16,10 +15,11 @@ class App extends Component {
           <ListsApp></ListsApp>
           <hr/>
           <StyleReact></StyleReact>
+          <hr/>
+          <StructureApp></StructureApp>
           <br/><br/><br/><br/>
 
         </div>
-      // </StyleRoot>
     );  
   }
 }
