@@ -4,6 +4,7 @@ import MethodPassingApp from './Lectures/MethodPassing/MethodPassingApp';
 import ListsApp from './Lectures/WorkingWithLists/ListsApp';
 import StyleReact from './Lectures/StylingReact/StyleReact';
 import StructureApp from './Lectures/Structuring/Containers/App';
+import Lifecycles from './Lectures/Lifecycles/Containers/App';
 
 class App extends Component {
   render() {
@@ -17,6 +18,8 @@ class App extends Component {
           <StyleReact></StyleReact>
           <hr/>
           <StructureApp></StructureApp>
+          <hr/>
+          <Lifecycles title="React Component Lifecycles"></Lifecycles>
           <br/><br/><br/><br/>
 
         </div>
