@@ -1,0 +1,31 @@
+
+.StyleReact button {
+    background-color: green;
+    display: inline-block;
+    color: white;
+    font: inherit;
+    border: 1px solid blue;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.StyleReact .red {
+    color: red;
+}
+
+.StyleReact .bold {
+    font-weight: bold;
+}
+
+.StyleReact button:hover {
+    background-color: lightgreen;
+    color: black;
+}
+
+.StyleReact button.Red {
+    background-color: red;
+}
+
+.StyleReact button.Red:hover {
+    background-color: salmon;
+}

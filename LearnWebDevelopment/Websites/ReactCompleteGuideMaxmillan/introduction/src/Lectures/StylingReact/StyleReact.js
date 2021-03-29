@@ -1,22 +1,25 @@
 import { Component } from 'react';
 import StyleReactPerson from './StyleReactPerson';
 // import Radium from 'radium';
-import styled from 'styled-components';
+// import styled from 'styled-components';
+import styles from './StyleReact.module.css';
+import personStyle from './StyleReactPerson.module.css'
 
-const StyledButton = styled.button`
-    background-color: ${props => props.alt ? 'red' : 'green' };
-    display: inline-block;
-    color: white;
-    font: inherit;
-    border: 1px solid blue;
-    padding: 8px;
-    cursor: pointer;
+// Used by styled components
+// const StyledButton = styled.button`
+//     background-color: ${props => props.alt ? 'red' : 'green' };
+//     display: inline-block;
+//     color: white;
+//     font: inherit;
+//     border: 1px solid blue;
+//     padding: 8px;
+//     cursor: pointer;
     
-    &:hover {
-        background-color: ${props => props.alt ? 'salmon' : 'lightgreen'};
-        color: black;
-    }
-`
+//     &:hover {
+//         background-color: ${props => props.alt ? 'salmon' : 'lightgreen'};
+//         color: black;
+//     }
+// `
 
 class StyleReact extends Component {
 
@@ -112,6 +115,7 @@ class StyleReact extends Component {
         // }
 
         let persons = null;
+        let btnClass = '';
 
         if(this.state.showPersons) {
             persons = (                         
@@ -136,6 +140,7 @@ class StyleReact extends Component {
                 </div>
             );
 
+            btnClass = styles.Red;
             // Inline style used by radium
             // style.backgroundColor = 'red';
             // style[':hover'] = {
@@ -145,25 +150,36 @@ class StyleReact extends Component {
         }
 
         const classes = ['style'];
+        // if (this.state.persons.length <= 2) {
+        //     classes.push('red');
+        // }
+        // if (this.state.persons.length <= 1) {
+        //     classes.push('bold');
+        // }
         if (this.state.persons.length <= 2) {
-            classes.push('red');
+            classes.push(styles.red);
         }
         if (this.state.persons.length <= 1) {
-            classes.push('bold');
+            classes.push(styles.bold);
         }
 
         return (
-            <div>
+            <div className={styles.StyleReact}>
                 <h2>Styling React with CSS</h2>
 
                 <p className={classes.join(' ')}>Number of persons in state {this.state.persons.length}</p>
 
                 <div className="modify-name">
-                    <StyledButton 
+                    <button 
+                        className = {btnClass}
+                        onClick={this.togglePersonsHandler}>
+                            Change Description
+                    </button>
+                    {/* <StyledButton 
                         alt={this.state.showPersons}
                         onClick={this.togglePersonsHandler}>
                             Change Description
-                    </StyledButton>
+                    </StyledButton> */}
                     {/* <button 
                         style = {style}
                         onClick={this.togglePersonsHandler}>
@@ -171,7 +187,9 @@ class StyleReact extends Component {
                     </button> */}
                 </div>
                 
-                {persons}
+                <div className={personStyle.PersonStyle}>
+                    {persons}
+                </div>
             </div>
         );
     }

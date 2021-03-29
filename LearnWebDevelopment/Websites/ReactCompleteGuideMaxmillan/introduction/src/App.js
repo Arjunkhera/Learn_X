@@ -3,7 +3,7 @@ import { Component } from 'react';
 import MethodPassingApp from './Lectures/MethodPassing/MethodPassingApp';
 import ListsApp from './Lectures/WorkingWithLists/ListsApp';
 import StyleReact from './Lectures/StylingReact/StyleReact';
-import { StyleRoot } from 'radium'
+// import { StyleRoot } from 'radium'
 
 class App extends Component {
   render() {
@@ -16,6 +16,8 @@ class App extends Component {
           <ListsApp></ListsApp>
           <hr/>
           <StyleReact></StyleReact>
+          <br/><br/><br/><br/>
+
         </div>
       // </StyleRoot>
     );  
