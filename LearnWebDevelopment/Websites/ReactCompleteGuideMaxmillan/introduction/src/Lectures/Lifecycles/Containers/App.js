@@ -2,6 +2,7 @@ import { Component } from 'react';
 import PersonStyle from '../Components/Persons/Person/Person.module.css'
 import Persons from '../Components/Persons/Persons';
 import Cockpit from '../Components/Cockpit/Cockpit';
+import WithClass from '../HOC/WithClass';
 
 class App extends Component {
     constructor(props) {
@@ -20,7 +21,9 @@ class App extends Component {
             "Dummy Description",
             "Dummy Description",
         ],
-        showPersons: false
+        showPersons: false,
+        showCockpit: true,
+        changeCounter: 0,
     }
 
     static getDerivedStateFromProps(props, state) {
@@ -28,13 +31,25 @@ class App extends Component {
         return state;
     }
 
-    componentWillMount() {
-        console.log('[Lifecycles/App.js] componentWillMount');
-
-    }
+    // componentWillMount() {
+    //     console.log('[Lifecycles/App.js] componentWillMount');
+    // }
 
     componentDidMount() {
         console.log('[Lifecycles/App.js] componentDidMount');
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log('[Lifecycles/App.js] shouldComponentUpdate');
+        return true;
+    }
+
+    componentDidUpdate() {
+        console.log('[Lifecycles/App.js] componentDidUpdate');
+    }
+
+    componentWillUnmount() {
+        console.log('[Lifecycles/App.js] componentWillUnmount');        
     }
 
     switchClickHandler = (modifiedIndex) => {
@@ -64,9 +79,19 @@ class App extends Component {
         const persons = [...this.state.persons];
         persons[personIndex] = person;
 
-        this.setState({
-            persons
+        this.setState((prevState, props) => {
+            return {
+                persons,
+                changeCounter: prevState.changeCounter + 1   
+            }
         });
+        
+        // Incorrect Way
+        // this.setState({
+        //     persons,
+        //     changeCounter: this.state.changeCounter + 1,
+        // });
+
     }
 
     togglePersonsHandler = () => {
@@ -104,14 +129,19 @@ class App extends Component {
 
         return (
             <div>
-                <Cockpit 
-                    persons={this.state.persons}
-                    toggle={this.togglePersonsHandler}
-                    title={this.props.title}
-                />
-                <div className={PersonStyle.Person}>
+                <button onClick={() => this.setState({showCockpit: !this.state.showCockpit})}>Cockpit</button>
+                {
+                    this.state.showCockpit ? 
+                        <Cockpit 
+                            personsLength={this.state.persons.length}
+                            toggle={this.togglePersonsHandler}
+                            title={this.props.title}
+                        />
+                        : null
+                }
+                <WithClass classes={PersonStyle.Person}>
                     {persons}
-                </div>
+                </WithClass>
             </div>
         );
     }

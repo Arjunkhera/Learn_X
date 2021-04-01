@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="086a9696-8518-40d8-aa50-4255243381f3" name="Default Changelist" comment="" />
+    <list default="true" id="086a9696-8518-40d8-aa50-4255243381f3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../LearnWebDevelopment/Websites/ReactCompleteGuideMaxmillan/introduction/src/Lectures/Lifecycles/Components/Cockpit/Cockpit.js" beforeDir="false" afterPath="$PROJECT_DIR$/../LearnWebDevelopment/Websites/ReactCompleteGuideMaxmillan/introduction/src/Lectures/Lifecycles/Components/Cockpit/Cockpit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LearnWebDevelopment/Websites/ReactCompleteGuideMaxmillan/introduction/src/Lectures/Lifecycles/Components/Persons/Person/Person.js" beforeDir="false" afterPath="$PROJECT_DIR$/../LearnWebDevelopment/Websites/ReactCompleteGuideMaxmillan/introduction/src/Lectures/Lifecycles/Components/Persons/Person/Person.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LearnWebDevelopment/Websites/ReactCompleteGuideMaxmillan/introduction/src/Lectures/Lifecycles/Components/Persons/Persons.js" beforeDir="false" afterPath="$PROJECT_DIR$/../LearnWebDevelopment/Websites/ReactCompleteGuideMaxmillan/introduction/src/Lectures/Lifecycles/Components/Persons/Persons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LearnWebDevelopment/Websites/ReactCompleteGuideMaxmillan/introduction/src/Lectures/Lifecycles/Containers/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../LearnWebDevelopment/Websites/ReactCompleteGuideMaxmillan/introduction/src/Lectures/Lifecycles/Containers/App.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

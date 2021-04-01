@@ -1,18 +1,51 @@
 import PersonStyle from './Person.module.css';
+import React, { Component } from 'react';
+// import Aux from '../../../HOC/Auxilliary';
+import { withClassTwo } from '../../../HOC/WithClass';
 
-const Person = (props) => {
-    console.log('[Lifecycles/Person.js] rendering...');
-    
-    return (
-            <div className={PersonStyle.Card} onClick={props.click} id={"Person-" + props.index}>
-                <p className={PersonStyle.PersonTitle}><span className={PersonStyle.PersonName}>{props.name}</span> {props.age}</p>
+class Person extends Component {
+
+    render() {
+        console.log('[Lifecycles/Person.js] rendering...');
+
+        return (
+            <div onClick={this.props.click} id={"Person-" + this.props.index}>
+                <p className={PersonStyle.PersonTitle}><span className={PersonStyle.PersonName}>{this.props.name}</span> {this.props.age}</p>
                 <hr/>
-                <p className={PersonStyle.PersonDescription}>{props.children}</p>
-                <input onChange={props.nameChange} value={props.name} />
+                <p className={PersonStyle.PersonDescription}>{this.props.children}</p>
+                <input onChange={this.props.nameChange} value={this.props.name} />
                 <br/><br/>
-                <button className={PersonStyle.Button} onClick={props.deleteCard}>Delete</button>
+                <button className={PersonStyle.Button} onClick={this.props.deleteCard}>Delete</button>
             </div>
-    );
+        );
+    }
 }
 
-export default Person;
+export default withClassTwo(Person, PersonStyle.Card);
+
+// Returning multiple adjacent elements
+// Use array
+// return ([
+//         <p className={PersonStyle.PersonTitle}><span className={PersonStyle.PersonName}>{this.props.name}</span> {this.props.age}</p>,
+//         <hr/>,
+//         <p className={PersonStyle.PersonDescription}>{this.props.children}</p>,
+//         <input onChange={this.props.nameChange} value={this.props.name} />,
+//         <br/>,
+//         <br/>,
+//         <button className={PersonStyle.Button} onClick={this.props.deleteCard}>Delete</button>,
+// ]);
+
+// Using a higher order component
+// return (
+//     <Aux>
+//         <p className={PersonStyle.PersonTitle}><span className={PersonStyle.PersonName}>{this.props.name}</span> {this.props.age}</p>
+//         <hr/>
+//         <p className={PersonStyle.PersonDescription}>{this.props.children}</p>
+//         <input onChange={this.props.nameChange} value={this.props.name} />
+//         <br/><br/>
+//         <button className={PersonStyle.Button} onClick={this.props.deleteCard}>Delete</button>
+//     </Aux>
+// );
+
+// User builtin HOC
+// <React.Fragment>
