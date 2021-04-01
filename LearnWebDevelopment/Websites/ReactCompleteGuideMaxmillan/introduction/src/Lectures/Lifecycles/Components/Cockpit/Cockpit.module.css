@@ -12,6 +12,7 @@
     color: white;
     font: inherit;
     border: 1px solid blue;
+    margin: 10px;
     padding: 8px;
     cursor: pointer;
 }

@@ -22,6 +22,14 @@
     font-style: bold;
 }
 
+.Person .LoggedIn {
+    color: green;
+}
+
+.Person .LoggedOut {
+    color: red;
+}
+
 .Person .PersonDescription {
     font-style: italic;
 }

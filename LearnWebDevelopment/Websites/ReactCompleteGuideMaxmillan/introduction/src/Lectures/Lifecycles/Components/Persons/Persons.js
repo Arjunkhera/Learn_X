@@ -53,6 +53,7 @@ class Persons extends Component {
                     nameChange = {(evt) => this.props.changed(evt, person.id)}
                     deleteCard = {() => this.props.delete(index)}
                     index = {index}
+                    isAuthenticated={this.props.isAuthenticated}
                     key = {person.id}
                 >
                     {this.props.descriptions[index]}

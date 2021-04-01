@@ -3,6 +3,7 @@ import PersonStyle from '../Components/Persons/Person/Person.module.css'
 import Persons from '../Components/Persons/Persons';
 import Cockpit from '../Components/Cockpit/Cockpit';
 import WithClass from '../HOC/WithClass';
+import AuthContext from '../Context/AuthContext';
 
 class App extends Component {
     constructor(props) {
@@ -12,7 +13,8 @@ class App extends Component {
 
     state = {
         persons: [
-            {id: 'xcvcxdks', firstname: 'Arjun', lastName: 'Khera', age: 24},
+            // age as string would give error in prop types check
+            {id: 'xcvcxdks', firstname: 'Arjun', lastName: 'Khera', age: "24"},
             {id: 'lkcnesdf', firstname: 'Neishka', lastName: 'Srivastava', age: 23},
             {id: 'kas93nsn', firstname: 'Ayush', lastName: 'Jain', age: 24},
         ],
@@ -24,6 +26,7 @@ class App extends Component {
         showPersons: false,
         showCockpit: true,
         changeCounter: 0,
+        isAuthenticated: false,
     }
 
     static getDerivedStateFromProps(props, state) {
@@ -112,6 +115,14 @@ class App extends Component {
         return person.firstname + " " + person.lastName;
     }
 
+    authenticate = () => {
+        this.setState((prevState, props) => {
+            return {
+                isAuthenticated: !prevState.isAuthenticated
+            }
+        });
+    }
+
     render() {
         console.log('[Lifecycles/App.js] rendering...');
         let persons = null;
@@ -123,6 +134,7 @@ class App extends Component {
                     clicked={this.switchClickHandler}
                     changed={this.switchNameChange}
                     delete={this.deletePersonsHandler}
+                    // isAuthenticated={this.state.isAuthenticated}
                 />
             );            
         }
@@ -130,18 +142,27 @@ class App extends Component {
         return (
             <div>
                 <button onClick={() => this.setState({showCockpit: !this.state.showCockpit})}>Cockpit</button>
-                {
-                    this.state.showCockpit ? 
-                        <Cockpit 
-                            personsLength={this.state.persons.length}
-                            toggle={this.togglePersonsHandler}
-                            title={this.props.title}
-                        />
-                        : null
-                }
-                <WithClass classes={PersonStyle.Person}>
-                    {persons}
-                </WithClass>
+                
+                <AuthContext.Provider 
+                    value={{
+                        authenticated: this.state.isAuthenticated,
+                        login: this.authenticate
+                    }}
+                >
+                    {
+                        this.state.showCockpit ? 
+                            <Cockpit 
+                                personsLength={this.state.persons.length}
+                                toggle={this.togglePersonsHandler}
+                                title={this.props.title}
+                                // login={this.authenticate}
+                            />
+                            : null
+                    }
+                    <WithClass classes={PersonStyle.Person}>
+                        {persons}
+                    </WithClass>
+                </AuthContext.Provider>
             </div>
         );
     }

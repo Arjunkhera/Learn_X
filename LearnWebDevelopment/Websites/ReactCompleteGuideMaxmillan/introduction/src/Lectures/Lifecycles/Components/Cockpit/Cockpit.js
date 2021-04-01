@@ -1,7 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useContext } from 'react';
 import Style from './Cockpit.module.css';
+import AuthContext from '../../Context/AuthContext';
 
 const Cockpit = (props) => {
+    const toggleBtnRef = useRef(null);
+    const authContext = useContext(AuthContext);
+
     useEffect(() => {
         console.log('[Lifecycles/Cockpit.js] useEffect run every time');
     });
@@ -9,6 +13,8 @@ const Cockpit = (props) => {
     // this hack works because we have dependencies as empty, so only run once
     useEffect(() => {
         console.log('[Lifecycles/Cockpit.js] useEffect run only when mounted');
+        // Using functional references. Placed here to ensure we access it after render
+        toggleBtnRef.current.click();
     }, []);
 
     useEffect(() => {
@@ -55,10 +61,34 @@ const Cockpit = (props) => {
 
             <div className="modify-name">
                 <button 
+                    ref = {toggleBtnRef}
                     className = {btnClass.join(' ')}
                     onClick={props.toggle}>
-                        Change Description
+                        Toggle Persons
                 </button>
+                
+                {/* <AuthContext.Consumer>
+                    {
+                        (context) => {
+                            return (
+                                <button
+                                    className = {btnClass.join(' ')}
+                                    onClick={context.login}
+                                >
+                                    Log In
+                                </button>            
+                            )
+                        }
+                    }
+                </AuthContext.Consumer> */}
+
+                <button
+                    className = {btnClass.join(' ')}
+                    onClick={authContext.login}
+                >
+                    Log In
+                </button>            
+
             </div>
        </div> 
     );
