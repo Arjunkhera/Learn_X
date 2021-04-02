@@ -1,8 +1,15 @@
-import React from 'react';
-import Aux from '../../../HOC/Auxilliary';
+import React, { useEffect } from 'react';
+import Aux from '../../../HOC/Auxilliary/Auxilliary';
 import Button from '../../UI/Button/Button';
 
-const orderSummary = (props) => {
+const OrderSummary = (props) => {
+
+    useEffect(() => {
+        // We get the following on every state update
+        // We can prevent this by adding should state update in modal
+        console.log('[OrderSummary] Rendered');
+    });
+
     const ingredientSummary = Object.keys(props.ingredients)
         .map(igKey => {
             return (
@@ -38,4 +45,4 @@ const orderSummary = (props) => {
     );
 };
 
-export default orderSummary;
+export default OrderSummary;
