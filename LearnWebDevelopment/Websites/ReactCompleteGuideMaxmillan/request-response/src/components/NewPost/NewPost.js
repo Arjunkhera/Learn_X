@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Http from '../../Utility/HTTPLib';
+import axios from 'axios';
+
 import './NewPost.css';
 
 class NewPost extends Component {
@@ -10,15 +11,15 @@ class NewPost extends Component {
     }
 
     postDataHandler = () => {
-        const post = {
+        const data = {
             title: this.state.title,
             body: this.state.content,
-            author: this.state.author,
+            author: this.state.author
         };
-
-        Http.post('https://jsonplaceholder.typicode.com/posts', post)
-            .then(data => console.log(data))
-            .catch(err => console.log(err));
+        axios.post('/posts', data)
+            .then(response => {
+                console.log(response);
+            });
     }
 
     render () {

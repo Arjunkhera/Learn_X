@@ -1,32 +1,36 @@
 import React, { Component } from 'react';
+// import axios from 'axios';
+import axios from '../../axios';
 
 import Post from '../../components/Post/Post';
 import FullPost from '../../components/FullPost/FullPost';
 import NewPost from '../../components/NewPost/NewPost';
 import './Blog.css';
-import Http from '../../Utility/HTTPLib';
 
 class Blog extends Component {
-
     state = {
         posts: [],
         selectedPostId: null,
+        error: false
     }
 
     componentDidMount () {
-        Http.get('https://jsonplaceholder.typicode.com/posts')
-            .then(data => {
-                const resp = data.slice(0, 6);
-                const posts = resp.map(post => {
+        axios.get( '/posts' )
+            .then( response => {
+                const posts = response.data.slice(0, 4);
+                const updatedPosts = posts.map(post => {
                     return {
                         ...post,
-                        author: 'Arjun',
+                        author: 'Max'
                     }
                 });
-                
-                this.setState({posts})
-                })
-            .catch(err => this.setState({error: true}));
+                this.setState({posts: updatedPosts});
+                // console.log( response );
+            } )
+            .catch(error => {
+                // console.log(error);
+                this.setState({error: true});
+            });
     }
 
     postSelectedHandler = (id) => {
@@ -34,18 +38,15 @@ class Blog extends Component {
     }
 
     render () {
-        let posts = <p style={{textAlign: 'center'}}>Something went wrong</p>
+        let posts = <p style={{textAlign: 'center'}}>Something went wrong!</p>;
         if (!this.state.error) {
             posts = this.state.posts.map(post => {
-                return (
-                    <Post 
-                        key={post.id} 
-                        title={post.title}
-                        author={post.author}
-                        clicked={() => this.postSelectedHandler(post.id)}
-                    />
-                )
-            });    
+                return <Post 
+                    key={post.id} 
+                    title={post.title} 
+                    author={post.author}
+                    clicked={() => this.postSelectedHandler(post.id)} />;
+            });
         }
 
         return (
@@ -54,7 +55,7 @@ class Blog extends Component {
                     {posts}
                 </section>
                 <section>
-                    <FullPost id={this.state.selectedPostId}/>
+                    <FullPost id={this.state.selectedPostId} />
                 </section>
                 <section>
                     <NewPost />
