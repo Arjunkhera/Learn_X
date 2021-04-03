@@ -82,14 +82,6 @@ public class App {
     }
 
     public static void testing() {
-
-        int[] values = new int[]{10,10,10,10,10,15,15,15,30,45,45,60,120,180,300};
-        int x = values.length;
-        System.out.println(values.length);
-        for (int i = 0; i < 5; i++) {
-            Random rand = new Random();
-            System.out.println(rand.nextInt(values.length));
-        }
-
+        
     }
 }
