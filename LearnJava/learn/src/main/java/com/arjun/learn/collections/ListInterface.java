@@ -1,4 +1,4 @@
-package com.arjun.collections;
+package com.arjun.learn.collections;
 
 import java.util.*;
 

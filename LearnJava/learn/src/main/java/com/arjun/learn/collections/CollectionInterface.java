@@ -1,4 +1,4 @@
-package com.arjun.collections;
+package com.arjun.learn.collections;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -18,9 +18,9 @@ public class CollectionInterface {
         example.add("3");
         example.add("4");
 
-        System.out.println(example.size());
-        System.out.println(example.isEmpty());
-        System.out.println(example.contains("3"));
+        System.out.println("size: " + example.size());
+        System.out.println("is empty ? " + example.isEmpty());
+        System.out.println("contains 3 ? " + example.contains("3"));
 
         // using method reference to print elements
         example.forEach(System.out::println);

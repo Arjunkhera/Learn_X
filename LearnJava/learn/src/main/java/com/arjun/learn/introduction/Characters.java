@@ -1,4 +1,4 @@
-package com.arjun.introduction;
+package com.arjun.learn.introduction;
 
 public class Characters {
 

@@ -1,4 +1,4 @@
-package com.arjun.collections.examples;
+package com.arjun.learn.collections.examples;
 
 import java.util.ArrayDeque;
 import java.util.Comparator;

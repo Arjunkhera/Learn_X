@@ -1,4 +1,4 @@
-package com.arjun.introduction;
+package com.arjun.learn.introduction;
 
 public class Strings {
 
@@ -49,37 +49,63 @@ public class Strings {
     }
 
     public static void commonMethods() {
-        String testString = "testing 123";
+        String name = "Arjun Khera";
 
-        System.out.println("Length of string : " + testString.length());
-        System.out.println("Character at index : " + testString.charAt(3));
+        // Basics
+        System.out.println("Length :" + name.length()); // 11
+        System.out.println("Is length of string 0 ? " + name.isEmpty()); // false
+        System.out.println("Is string length 0 or consisting only of spaces and tabs ? " + name.isBlank()); // false
 
-        String anotherTestString = "abc def ghi";
+        // Find prefix
+        boolean flag;
+        flag = name.startsWith("Arjun");
+        System.out.println("String starts with Arjun ? " + flag);
+        flag = name.endsWith("String ends with Srivastava ? " + "Srivastava");
+        System.out.println(flag);
 
-        System.out.println(anotherTestString.isEmpty());
+        // Obtaining a substring
+        String firstName = name.substring(0, "Arjun".length());
+        System.out.println("First name is :" + firstName);
+        String lastName = name.substring("Arjun".length() + 1);
+        System.out.println("Last name is :" + lastName);
 
-        System.out.println(anotherTestString.toUpperCase());
-        System.out.println(anotherTestString.toLowerCase());
+        // Changing case
+        System.out.println(name.toUpperCase());
+        System.out.println(name.toLowerCase());
 
-        System.out.println(anotherTestString.startsWith("abc"));
-        System.out.println(anotherTestString.endsWith("gh"));
 
-        System.out.println(anotherTestString.contains("def"));
-        System.out.println(anotherTestString.substring(3,7));
-        System.out.println(anotherTestString.replace("de","yz"));
+        String path = "/content/help/en/language/en/men/products";
+
+        // Replaces all occurrences
+        String newPath = path.replace("/en/", "/fr/");
+        System.out.println("Original Path : " + path);
+        System.out.println("Modified Path : " + newPath);
+
+        // Replace all given regex
+        String replaceAll = path.replaceAll("/", "|");
+        System.out.println("Replace all : " + replaceAll);
+
+        // Replace first given regex
+        String replaceFirst = path.replaceFirst("/en/", "/fr/");
+        System.out.println("Replace first : " + replaceFirst);
     }
 
     public static void stringsAndChars() {
-        char[] charArray = {'A','B','C'};
+        // Converting character arrays to String
+        char[] charArray = new char[]{'1', '2', '3'};
 
-        // convert character array to string
-        String stringFromCharArray = String.valueOf(charArray);
-        String anotherMethod = new String(charArray);
-        System.out.println(stringFromCharArray);
-        System.out.println(anotherMethod);
+        // Two ways
+        String convertedStringFirst = String.valueOf(charArray);
+        System.out.println("First conversion method : " + convertedStringFirst);
+        String convertedStringSecond = new String(charArray);
+        System.out.println("Second conversion method : " + convertedStringSecond);
+
+        Character[] CharacterArray = new Character[]{'1', '2', '3'};
+        String convertedStringThird = CharacterArray.toString();
+        System.out.println("Third conversion method : " + convertedStringThird);
 
         // converting string back to char array
-        char[] newCharArray = stringFromCharArray.toCharArray();
+        char[] newCharArray = convertedStringFirst.toCharArray();
 
         // splitting a string
         String testString = "This string has spaces";
@@ -87,8 +113,12 @@ public class Strings {
         for( String i : splitString) {
             System.out.println(i);
         }
+    }
 
-        // Example program for counting spaces
+    /**
+     * Example program for counting spaces
+     */
+    public static void countWhiteSpaces() {
         String str = "strings are not primitive types!";
 
         int count = 0;
