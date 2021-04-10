@@ -9,19 +9,26 @@ import java.util.List;
 
 public class App {
     public static void main( String[] args ) throws IOException {
-        testing();
+        int[] arr = {2,0,2,1,1,0};
+        sortColors(arr);
     }
 
-    public static void testing() {
-        String path1= "/content/dam/we-retail/en/a";
-        String path2= "/content/dam/en/";
-        String path3= "/content/dam/we-retail/a/a/en/c";
-
-        String prefix = "/content/dam/";
-        String[] result = path1.split("/");
-        for(String res: result) {
-            System.out.println(res);
+    public static void sortColors(int[] A) {
+        int n = A.length;
+        int j = 0, k = n-1, temp;
+        for (int i=0; i <= k; i++) {
+            if (A[i] == 0) {
+                temp = A[i];
+                A[i] = A[j];
+                A[j] = temp;
+                j++;
+            }
+            else if (A[i] == 2) {
+                temp = A[i];
+                A[i] = A[k];
+                A[k] = temp;
+                i--; k--;
+            }
         }
-        System.out.println(String.join(":", result));
     }
 }
