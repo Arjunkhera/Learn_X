@@ -1,34 +1,34 @@
 package com.arjun.learn;
 
-import com.arjun.learn.algorithms.graphs.Traversal;
-import com.arjun.learn.algorithms.graphs.TraversalString;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.StringJoiner;
 
 public class App {
     public static void main( String[] args ) throws IOException {
-        int[] arr = {2,0,2,1,1,0};
-        sortColors(arr);
+
     }
 
-    public static void sortColors(int[] A) {
-        int n = A.length;
-        int j = 0, k = n-1, temp;
-        for (int i=0; i <= k; i++) {
-            if (A[i] == 0) {
-                temp = A[i];
-                A[i] = A[j];
-                A[j] = temp;
-                j++;
-            }
-            else if (A[i] == 2) {
-                temp = A[i];
-                A[i] = A[k];
-                A[k] = temp;
-                i--; k--;
-            }
-        }
+    public void testing() {
+        System.out.println(getSearchPath("/content/dam/a/b/c/d/e/de"));
+        System.out.println(getSearchPath("/content/dam/de"));
+        System.out.println(getSearchPath("/content/dam/a/de"));
     }
+
+    public static String getSearchPath(String path) {
+        String searchPath = "/content/dam/";
+        String[] pathArray = path.split("/");
+
+        int length = Math.max(3, pathArray.length - 3);
+        if(length > 3) {
+            StringJoiner joiner = new StringJoiner("/", "", "/");
+            for(int i = 0; i < length; i++) {
+                joiner.add(pathArray[i]);
+            }
+            searchPath = joiner.toString();
+        }
+
+        return searchPath;
+    }
+
 }

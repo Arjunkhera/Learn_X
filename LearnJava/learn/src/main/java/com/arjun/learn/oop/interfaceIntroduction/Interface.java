@@ -1,4 +1,4 @@
-package com.arjun.oop.interfaceIntroduction;
+package com.arjun.learn.oop.interfaceIntroduction;
 
 public interface Interface {
     int INT_CONSTANT = 0; // it's a constant, the same as public static final INT_FIELD = 0
