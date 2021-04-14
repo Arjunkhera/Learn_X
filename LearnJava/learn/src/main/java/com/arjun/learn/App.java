@@ -6,7 +6,10 @@ import java.util.StringJoiner;
 
 public class App {
     public static void main( String[] args ) throws IOException {
+        String ab = "ab";
+        for(char ch : ab.toCharArray()) {
 
+        }
     }
 
     public void testing() {

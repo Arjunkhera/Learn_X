@@ -1,4 +1,4 @@
-package com.arjun.collections.examples;
+package com.arjun.learn.collections.examples;
 
 public class Player implements Comparable<Player> {
     private int ranking;

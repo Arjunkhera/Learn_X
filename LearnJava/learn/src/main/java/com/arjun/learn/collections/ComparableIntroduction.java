@@ -1,7 +1,7 @@
-package com.arjun.collections;
+package com.arjun.learn.collections;
 
-import com.arjun.collections.examples.Player;
-import com.arjun.collections.examples.PlayerRankingComparator;
+import com.arjun.learn.collections.examples.Player;
+import com.arjun.learn.collections.examples.PlayerRankingComparator;
 
 import java.util.*;
 
