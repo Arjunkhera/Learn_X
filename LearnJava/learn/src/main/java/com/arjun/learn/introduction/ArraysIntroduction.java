@@ -1,8 +1,28 @@
 package com.arjun.learn.introduction;
 
-public class Arrays {
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class ArraysIntroduction {
 
     public static void main(String[] args) {
+//        introduction();
+//        System.out.println("------------");
+//
+//        commonMethods();
+//        System.out.println("------------");
+
+//        introductionToArrays();
+//        System.out.println("------------");
+
+        twoDimensionalArrays();
+        System.out.println("------------");
+//
+//        miscellaneous();
+//        System.out.println("------------");
+    }
+
+    public static void introduction() {
         // Arrays are reference types
 
         // Declaration method one : prominent
@@ -49,25 +69,39 @@ public class Arrays {
         int[] firstArray = {1,2,3,4,5};
 
         // Converting array to string
-        System.out.println(java.util.Arrays.toString(firstArray));
+        System.out.println(Arrays.toString(firstArray));
 
         int[] secondArray = {3,1,10,8,5};
-        java.util.Arrays.sort(secondArray);
-        System.out.println(java.util.Arrays.toString(secondArray));
+        Arrays.sort(secondArray);
+        System.out.println(Arrays.toString(secondArray));
 
         // checking equality of Arrays : elements should match for every index
         int[] thirdArray = {1,2,3,4,5};
 
-        System.out.println(java.util.Arrays.equals(firstArray,secondArray));  // false
-        System.out.println(java.util.Arrays.equals(firstArray,thirdArray));   // true
+        System.out.println(Arrays.equals(firstArray,secondArray));  // false
+        System.out.println(Arrays.equals(firstArray,thirdArray));   // true
 
         // filling array with characters
         int size = 10;
         char[] fourthArray = new char[size];
 
-        java.util.Arrays.fill(fourthArray,0, size/2, 'A');
-        java.util.Arrays.fill(fourthArray, size/2, size, 'B');
+        Arrays.fill(fourthArray,0, size/2, 'A');
+        Arrays.fill(fourthArray, size/2, size, 'B');
         System.out.println(java.util.Arrays.toString(fourthArray));
+    }
+
+    public static void twoDimensionalArrays() {
+        int[][] twoD = {
+                {19,2},
+                {1,7},
+                {10,11},
+                {3,21}
+        };
+
+        Arrays.sort(twoD, Comparator.comparingInt(a -> a[0]));
+        for(int[] row: twoD) {
+            System.out.println(Arrays.toString(row));
+        }
     }
 
     public static void miscellaneous() {

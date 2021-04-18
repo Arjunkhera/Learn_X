@@ -12,7 +12,6 @@ public class Strings {
 
         stringsAndChars();
         System.out.println("-----------");
-
     }
 
     public static void introduction() {

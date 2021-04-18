@@ -2,14 +2,17 @@ package com.arjun.learn;
 
 
 import java.io.IOException;
-import java.util.StringJoiner;
+import java.util.*;
 
 public class App {
     public static void main( String[] args ) throws IOException {
-        String ab = "ab";
-        for(char ch : ab.toCharArray()) {
 
-        }
+        Set<Integer> hello = new HashSet<>();
+        Map<Integer, Set<Integer>> graph = new HashMap<>();
+        graph.computeIfAbsent(2, k -> new HashSet<Integer>()).add(3);
+        int n = 6;
+        System.out.println(n);
+        System.out.println(n ^ ((1 << 32) - 1));
     }
 
     public void testing() {
