@@ -7,13 +7,8 @@ import java.util.*;
 public class App {
     public static void main( String[] args ) throws IOException {
 
-        Set<Integer> hello = new HashSet<>();
-        Map<Integer, Set<Integer>> graph = new HashMap<>();
-        graph.computeIfAbsent(2, k -> new HashSet<Integer>()).add(3);
-        int n = 6;
-        System.out.println(n);
-        System.out.println(n ^ ((1 << 32) - 1));
     }
+
 
     public void testing() {
         System.out.println(getSearchPath("/content/dam/a/b/c/d/e/de"));
