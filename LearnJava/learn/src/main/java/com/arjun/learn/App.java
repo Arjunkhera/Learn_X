@@ -6,14 +6,20 @@ import java.util.*;
 
 public class App {
     public static void main( String[] args ) throws IOException {
-
+        testing();
     }
 
 
-    public void testing() {
-        System.out.println(getSearchPath("/content/dam/a/b/c/d/e/de"));
-        System.out.println(getSearchPath("/content/dam/de"));
-        System.out.println(getSearchPath("/content/dam/a/de"));
+    public static void testing() {
+        int[][] check = new int[][] {
+                {3,2,1},
+                {14,1,10},
+                {1,6,2}
+        };
+
+        Arrays.sort(check[2]);
+
+        System.out.println("Hello");
     }
 
     public static String getSearchPath(String path) {

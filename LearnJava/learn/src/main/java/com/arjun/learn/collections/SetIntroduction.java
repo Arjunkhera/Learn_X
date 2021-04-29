@@ -1,10 +1,13 @@
-package com.arjun.collections;
+package com.arjun.learn.collections;
 
 import java.util.*;
 
-public class SetInterface {
+public class SetIntroduction {
     public static void main(String[] args) {
         introduction();
+        System.out.println("---------------");
+
+
     }
 
     public static void introduction() {

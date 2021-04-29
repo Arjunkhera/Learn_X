@@ -2,7 +2,7 @@ package com.arjun.learn.collections;
 
 import java.util.*;
 
-public class ListInterface {
+public class ListIntroduction {
     public static void main(String[] args) {
         introduction();
         linkedList();

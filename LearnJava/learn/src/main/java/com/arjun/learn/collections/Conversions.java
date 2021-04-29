@@ -71,4 +71,13 @@ public class Conversions {
         Set<Integer> intStream = IntStream.of(arr).boxed().collect(Collectors.toSet());
     }
 
+    public void setToArray() {
+        Set<Integer> set = Set.of(1,2,3,4,5);
+        Integer[] wrapper = set.toArray(new Integer[0]);
+        // or, using Java 11
+        wrapper = set.toArray(Integer[]::new);
+
+        // New to convert to int stream before generating primitive array
+        int[] primitive = set.stream().mapToInt(Integer::intValue).toArray();
+    }
 }

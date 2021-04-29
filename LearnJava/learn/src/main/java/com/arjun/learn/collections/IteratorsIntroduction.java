@@ -2,7 +2,7 @@ package com.arjun.learn.collections;
 
 import java.util.*;
 
-public class Iteration {
+public class IteratorsIntroduction {
     public static void main(String[] args) {
         iterator();
         System.out.println("------------");
@@ -18,7 +18,7 @@ public class Iteration {
         Iterator<Integer> iteratorOnList = List.of(1,2,3,4,5).iterator();
 
         while(iteratorOnList.hasNext())
-            System.out.printf("%d ", iteratorOnList.next());
+            System.out.printf("%d ", iteratorOnList.next()); // 1 2 3 4 5
         System.out.println("");
 
         Set<Long> set = new TreeSet<>();
@@ -37,7 +37,11 @@ public class Iteration {
         }
 
         for(Long lg: set)
-            System.out.printf("%d ", lg);
+            System.out.printf("%d ", lg); // 10 14 18
+        System.out.println("");
+
+        Iterator<Long> forEachExample = set.iterator();
+        forEachExample.forEachRemaining(element -> System.out.printf("%d ", element)); // 10 14 18
         System.out.println("");
     }
 
