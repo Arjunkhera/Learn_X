@@ -5,27 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="086a9696-8518-40d8-aa50-4255243381f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/collections/IteratorsIntroduction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/collections/ListIntroduction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/collections/SetIntroduction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/Empty.java" beforeDir="false" afterPath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/Empty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/collections/CollectionInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/collections/CollectionInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/collections/Conversions.java" beforeDir="false" afterPath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/collections/Conversions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/collections/Iteration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/collections/ListInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/collections/MapExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/collections/SetInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/target/classes/com/arjun/collections/MapExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/target/classes/com/arjun/collections/SetInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/introduction/BitShift.java" beforeDir="false" afterPath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/introduction/BitShift.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/Empty.class" beforeDir="false" afterPath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/Empty.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/collections/CollectionInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/collections/CollectionInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/collections/Conversions.class" beforeDir="false" afterPath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/collections/Conversions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/collections/ListInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/introduction/BitShift.class" beforeDir="false" afterPath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/introduction/BitShift.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/collections/Iteration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/introduction/ArraysIntroduction.java" beforeDir="false" afterPath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/introduction/ArraysIntroduction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/collections/MapIntroduction.class" beforeDir="false" afterPath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/collections/MapIntroduction.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,13 +47,39 @@
       <recent name="C:\Users\arkhera\Desktop\Repositories\Learn_X\LearnJava\learn\src\main\java\com\arjun\learn" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MapIntroduction">
+  <component name="RunManager" selected="Application.ArraysIntroduction">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.arjun.learn.App" />
       <module name="learn" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.arjun.learn.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArraysIntroduction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.arjun.learn.introduction.ArraysIntroduction" />
+      <module name="learn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.arjun.learn.introduction.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BitShift" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.arjun.learn.introduction.BitShift" />
+      <module name="learn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.arjun.learn.introduction.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,8 +115,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MapIntroduction" />
+        <item itemvalue="Application.ArraysIntroduction" />
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.BitShift" />
+        <item itemvalue="Application.MapIntroduction" />
         <item itemvalue="Application.IteratorsIntroduction" />
       </list>
     </recent_temporary>
@@ -131,16 +145,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/App.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

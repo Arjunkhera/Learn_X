@@ -6,20 +6,19 @@ import java.util.Comparator;
 public class ArraysIntroduction {
 
     public static void main(String[] args) {
-//        introduction();
-//        System.out.println("------------");
-//
-//        commonMethods();
-//        System.out.println("------------");
+        System.out.println("\nintroduction()\n");
+        introduction();
 
-//        introductionToArrays();
-//        System.out.println("------------");
+        System.out.println("\nutilityArraysIntroduction()\n");
+        utilityArraysIntroduction();
 
+        System.out.println("\ntwoDimensionalArrays()\n");
         twoDimensionalArrays();
-        System.out.println("------------");
-//
-//        miscellaneous();
-//        System.out.println("------------");
+
+        System.out.println("\nsortingInDepth()\n");
+        sortingInDepth();
+
+        // miscellaneous();
     }
 
     public static void introduction() {
@@ -48,24 +47,11 @@ public class ArraysIntroduction {
             System.out.println(i);
         }
 
-        System.out.println("-------");
-        commonMethods();
-
-        System.out.println("-------");
-        introductionToArrays();
-
-        System.out.println("-------");
-        miscellaneous();
+        // one inbuilt method in arrays to find length
+        System.out.println(fifthArray.length);
     }
 
-    public static void commonMethods() {
-        int[] firstArray = {1,2,3,4,5};
-
-        // Finding the length of the array
-        System.out.println(firstArray.length);
-    }
-
-    public static void introductionToArrays() {
+    public static void utilityArraysIntroduction() {
         int[] firstArray = {1,2,3,4,5};
 
         // Converting array to string
@@ -87,7 +73,7 @@ public class ArraysIntroduction {
 
         Arrays.fill(fourthArray,0, size/2, 'A');
         Arrays.fill(fourthArray, size/2, size, 'B');
-        System.out.println(java.util.Arrays.toString(fourthArray));
+        System.out.println(Arrays.toString(fourthArray));
     }
 
     public static void twoDimensionalArrays() {
@@ -102,6 +88,46 @@ public class ArraysIntroduction {
         for(int[] row: twoD) {
             System.out.println(Arrays.toString(row));
         }
+    }
+
+    public static void sortingInDepth() {
+        // Single Index Sorting
+        int[] array = {3,1,10,8,5};
+        Arrays.sort(array);
+        System.out.println(Arrays.toString(array)); // [1, 3, 5, 8, 10]
+        System.out.println("------------");
+
+        // TwoDimensional Index Sorting
+        int[][] rooms = {{7,14},{11,6},{3,1},{9,4},{14,14},{17,11},{22,13},{6,25},{12,22},{21,9}};
+        // Original
+        for(var room: rooms) // [7:14],[11:6],[3:1],[9:4],[14:14],[17:11],[22:13],[6:25],[12:22],[21:9],
+            System.out.printf("[%d:%d],", room[0], room[1]);
+        System.out.println("\n------------");
+
+        // Ascending Order : default
+        // If first index is used, or default object comparable is used
+        // no need to provide comparator
+        // If any other index or property is required, use Comparator
+        int[][] ascending = Arrays.stream(rooms).map(int[]::clone).toArray(int[][]::new);
+        Arrays.sort(ascending, Comparator.comparingInt(a -> a[1]));
+        // Comparator.comparing(object -> object.method()); is a general way of comparing
+        for(var room: ascending) // [3:1],[9:4],[11:6],[21:9],[17:11],[22:13],[7:14],[14:14],[12:22],[6:25],
+            System.out.printf("[%d:%d],", room[0], room[1]);
+        System.out.println("\n------------");
+
+        // Descending Order
+        int[][] descending = Arrays.stream(rooms).map(int[]::clone).toArray(int[][]::new);
+        Arrays.sort(descending, (a, b) -> Integer.compare(b[1], a[1]));
+        for(var room: descending) // [6:25],[12:22],[7:14],[14:14],[22:13],[17:11],[21:9],[11:6],[9:4],[3:1],
+            System.out.printf("[%d:%d],", room[0], room[1]);
+        System.out.println("\n------------");
+
+        // Note : order is maintained while sorting,
+        // hence [7:14] will come before [14:14] in sorted string
+    }
+
+    public static void cloningArrays() {
+
     }
 
     public static void miscellaneous() {
