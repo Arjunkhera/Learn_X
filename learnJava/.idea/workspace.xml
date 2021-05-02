@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="086a9696-8518-40d8-aa50-4255243381f3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/introduction/BitShift.java" beforeDir="false" afterPath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/introduction/BitShift.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/introduction/BitShift.class" beforeDir="false" afterPath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/introduction/BitShift.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/introduction/ArraysIntroduction.java" beforeDir="false" afterPath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/introduction/ArraysIntroduction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/collections/MapIntroduction.class" beforeDir="false" afterPath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/collections/MapIntroduction.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +41,7 @@
       <recent name="C:\Users\arkhera\Desktop\Repositories\Learn_X\LearnJava\learn\src\main\java\com\arjun\learn" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ArraysIntroduction">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.arjun.learn.App" />
       <module name="learn" />
@@ -100,8 +94,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MapIntroduction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.arjun.learn.collections.MapIntroduction" />
+    <configuration name="QueueExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.arjun.learn.collections.QueueExample" />
       <module name="learn" />
       <extension name="coverage">
         <pattern>
@@ -115,11 +109,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ArraysIntroduction" />
         <item itemvalue="Application.App" />
-        <item itemvalue="Application.BitShift" />
-        <item itemvalue="Application.MapIntroduction" />
         <item itemvalue="Application.IteratorsIntroduction" />
+        <item itemvalue="Application.QueueExample" />
+        <item itemvalue="Application.ArraysIntroduction" />
+        <item itemvalue="Application.BitShift" />
       </list>
     </recent_temporary>
   </component>
@@ -145,5 +139,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/App.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

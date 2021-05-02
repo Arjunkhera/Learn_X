@@ -4,14 +4,14 @@ import java.util.*;
 
 public class IteratorsIntroduction {
     public static void main(String[] args) {
+        System.out.println("\niterator()");
         iterator();
-        System.out.println("------------");
 
+        System.out.println("\nenhancedForLoop()");
         enhancedForLoop();
-        System.out.println("------------");
 
+        System.out.println("\nlistIterator()");
         listIterator();
-        System.out.println("------------");
     }
 
     public static void iterator() {
@@ -48,12 +48,12 @@ public class IteratorsIntroduction {
     public static void enhancedForLoop() {
         Iterable<Integer> iterable = List.of(1,2,3);
 
-        // use for each loop
+        // used for enhanced for loop
         for(Integer integer : iterable)
             System.out.printf("%d ", integer);
         System.out.println("");
 
-        // use for each method
+        // or apply the for each method
         iterable.forEach(System.out::println);
 
         // output order is not guaranteed in sets
@@ -81,7 +81,7 @@ public class IteratorsIntroduction {
 
         System.out.println("--------------------");
         // Optional Methods : will throw UnsupportedOperationException if not implemented
-        List<Integer> arrayList = new ArrayList<Integer>(List.of(1,2,3,4));
+        List<Integer> arrayList = new ArrayList<>(List.of(1,2,3,4));
 
         ListIterator<Integer> addingElement = arrayList.listIterator();
         // Add element

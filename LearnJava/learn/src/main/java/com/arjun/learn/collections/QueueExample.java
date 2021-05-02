@@ -46,9 +46,9 @@ public class QueueExample {
 
     public static void priorityQueue() {
         // Min Heap
-        PriorityQueue<Integer> minHeap = new PriorityQueue<>((x,y) -> -1*Integer.compare(x,y));
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         // Max Heap
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((x,y) -> -1*Integer.compare(x,y));
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((x,y) -> Integer.compare(y,x));
 
         // offer() and add() are used to add elements
         maxHeap.add(51);

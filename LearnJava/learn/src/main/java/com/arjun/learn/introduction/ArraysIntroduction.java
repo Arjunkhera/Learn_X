@@ -16,7 +16,7 @@ public class ArraysIntroduction {
         twoDimensionalArrays();
 
         System.out.println("\nsortingInDepth()\n");
-        sortingInDepth();
+        sortingArrays();
 
         // miscellaneous();
     }
@@ -90,7 +90,7 @@ public class ArraysIntroduction {
         }
     }
 
-    public static void sortingInDepth() {
+    public static void sortingArrays() {
         // Single Index Sorting
         int[] array = {3,1,10,8,5};
         Arrays.sort(array);
