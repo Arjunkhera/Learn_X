@@ -4,14 +4,17 @@ public class Strings {
 
     public static void main(String[] args) {
 
+        System.out.println("\nString Introduction\n");
         introduction();
-        System.out.println("-----------");
 
+        System.out.println("\nCommon String Methods\n");
         commonMethods();
-        System.out.println("-----------");
 
+        System.out.println("\nStrings and Characters\n");
         stringsAndChars();
-        System.out.println("-----------");
+
+        System.out.println("\nReverse String\n");
+        reverseString();
     }
 
     public static void introduction() {
@@ -72,7 +75,6 @@ public class Strings {
         System.out.println(name.toUpperCase());
         System.out.println(name.toLowerCase());
 
-
         String path = "/content/help/en/language/en/men/products";
 
         // Replaces all occurrences
@@ -87,6 +89,13 @@ public class Strings {
         // Replace first given regex
         String replaceFirst = path.replaceFirst("/en/", "/fr/");
         System.out.println("Replace first : " + replaceFirst);
+
+        // Splitting a string
+        String testString = "This string has spaces";
+        String[] splitString = testString.split(" ");
+        for( String i : splitString) {
+            System.out.println(i);
+        }
     }
 
     public static void stringsAndChars() {
@@ -99,19 +108,23 @@ public class Strings {
         String convertedStringSecond = new String(charArray);
         System.out.println("Second conversion method : " + convertedStringSecond);
 
+        // we can use value with variations
+        String convertedStringWithOffsetAndLength = String.valueOf(charArray, 1,1); // 2
+        System.out.println("Obtaining char array with offset and length: " + convertedStringWithOffsetAndLength);
+
         Character[] CharacterArray = new Character[]{'1', '2', '3'};
         String convertedStringThird = CharacterArray.toString();
         System.out.println("Third conversion method : " + convertedStringThird);
 
         // converting string back to char array
         char[] newCharArray = convertedStringFirst.toCharArray();
+    }
 
-        // splitting a string
-        String testString = "This string has spaces";
-        String[] splitString = testString.split(" ");
-        for( String i : splitString) {
-            System.out.println(i);
-        }
+    public static void reverseString() {
+        String original = "original string";
+        String reverse = new StringBuilder(original).reverse().toString();
+
+        System.out.println(original + "::" + reverse);
     }
 
     /**

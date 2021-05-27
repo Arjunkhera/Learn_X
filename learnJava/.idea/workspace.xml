@@ -5,12 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="086a9696-8518-40d8-aa50-4255243381f3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/leetcode/Q169.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/learn/target/classes/com/arjun/learn/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -147,6 +157,11 @@
           <url>file://$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/App.java</url>
           <line>25</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/learn/src/main/java/com/arjun/learn/App.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

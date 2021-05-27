@@ -1,34 +1,34 @@
 package com.arjun.learn;
 
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
+import com.arjun.learn.algorithms.dynamicprogramming.KMP;
+
+import java.util.*;
+
 
 public class App {
-    public static void main( String[] args ) throws IOException {
-        myPow(2.0, 1024);
+    public static void main( String[] args ) {
+        Map<Character, Integer> store = new TreeMap<>((x, y) -> Integer.compare(y,x));
     }
 
-    public static double myPow(double x, int n) {
-        double ans = 1;
-        if (n < 0) {
-            x = 1/x;
-            if (n == Integer.MIN_VALUE) {
-                ans *= x;
-                n >>= 1;
+
+    public void test() {
+        KMP example = new KMP("ababd");
+        String str = "ababcabcabababd";
+        int answer = example.isSubString(str);
+        System.out.println(answer);
+        System.out.println(str.substring(answer));
+    }
+
+    public static void insertionSort(int[] arr) {
+        for(int i = 1; i < arr.length; i++) {
+            int j = i-1;
+            while(j >= 0 && arr[j] > arr[j+1]) {
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+                j--;
             }
-            n = -n;
         }
-
-        while (n > 0) {
-            ans = n % 2 == 0 ? ans : ans*x;
-            x *= x;
-            n >>= 2;
-        }
-
-        return ans;
     }
 }

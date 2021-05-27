@@ -1,4 +1,4 @@
-package com.arjun.competitive.datastructure.linkedlist;
+package com.arjun.learn.competitive.datastructure.linkedlist;
 
 public class SingleLinkedList {
     public int value;

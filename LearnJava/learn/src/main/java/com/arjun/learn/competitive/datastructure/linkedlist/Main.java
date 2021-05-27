@@ -1,4 +1,4 @@
-package com.arjun.competitive.datastructure.linkedlist;
+package com.arjun.learn.competitive.datastructure.linkedlist;
 
 import java.util.HashSet;
 import java.util.Set;
