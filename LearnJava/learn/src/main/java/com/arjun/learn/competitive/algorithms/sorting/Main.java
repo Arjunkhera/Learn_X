@@ -1,4 +1,4 @@
-package com.arjun.competitive.algorithms.sorting;
+package com.arjun.learn.competitive.algorithms.sorting;
 
 import java.util.Arrays;
 
@@ -15,8 +15,8 @@ public class Main {
                 .forEach(element -> System.out.print(element + " "));
         System.out.println("\n----\n");
 
-        Sort sort = new BubbleSort();
-        sort.sortArray(arr);
+//        Sort sort = new BubbleSort();
+//        sort.sortArray(arr);
         Arrays.stream(arr)
                 .forEach(element -> System.out.print(element + " "));
     }

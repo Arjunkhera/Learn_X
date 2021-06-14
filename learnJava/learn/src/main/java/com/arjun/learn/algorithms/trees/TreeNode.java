@@ -1,7 +1,7 @@
 package com.arjun.learn.algorithms.trees;
 
 public class TreeNode {
-    public int data;
+    public int val;
     public TreeNode left;
     public TreeNode right;
 
@@ -10,12 +10,12 @@ public class TreeNode {
     }
 
     public TreeNode(int val) {
-        data = val;
+        this.val = val;
         left = right = null;
     }
 
     public TreeNode(int val, TreeNode left, TreeNode right) {
-        data = val;
+        this.val = val;
         this.left = left;
         this.right = right;
     }

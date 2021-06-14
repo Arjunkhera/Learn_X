@@ -45,4 +45,22 @@ public class ComparableIntroduction {
         // another example, but with method reference
         Comparator<Player> ageComparator = Comparator.comparing(Player::getAge);
     }
+
+    public static void comparatorsForPrimitives() {
+        int[] oneDimensionalArray = new int[25];
+        // Ascending order
+        Arrays.sort(oneDimensionalArray);
+        // Descending order ?
+        // Arrays.sort(oneDimensionalArray, (x, y) -> y - x); // throws error
+
+        // Comparators require Objects
+        int[][] twoDimensionalArray = new int[26][2];
+        // works because int[] is an Object
+        Arrays.sort(twoDimensionalArray, (x, y) -> y[0] - x[0]);
+
+        Integer[] wrapperArray = new Integer[26];
+        // Remember, unlike int arrays, Objects are initialized with null values
+        System.out.println(wrapperArray[2] == null ? "true" : "false");
+    }
+
 }

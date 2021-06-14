@@ -1,6 +1,6 @@
 package com.arjun.learn.algorithms.sorting;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 

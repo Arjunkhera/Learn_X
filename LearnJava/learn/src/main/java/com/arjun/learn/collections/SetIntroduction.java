@@ -4,10 +4,11 @@ import java.util.*;
 
 public class SetIntroduction {
     public static void main(String[] args) {
-        introduction();
+        // introduction();
         System.out.println("---------------");
 
-
+        sortedSet();
+        navigableSet();
     }
 
     public static void introduction() {
@@ -25,20 +26,7 @@ public class SetIntroduction {
         System.out.println(numbers.contains(300)); // true
     }
 
-    public static void hashSet() {
-        Set<String> countries = new HashSet<>();
-
-        countries.add("India");
-        countries.add("Japan");
-        countries.add("Switzerland");
-        countries.add("Japan");
-        countries.add("Brazil");
-
-        System.out.println(countries); // [Japan, Brazil, Switzerland, India]
-        System.out.println(countries.contains("Switzerland")); // true
-    }
-
-    public static void treeSet() {
+    public static void sortedSet() {
         SortedSet<Integer> sortedSet = new TreeSet<>();
 
         sortedSet.add(10);
@@ -54,6 +42,32 @@ public class SetIntroduction {
 
         System.out.println(sortedSet.first()); // minimum is 10
         System.out.println(sortedSet.last());  // maximum is 21
+    }
+
+    public static void navigableSet() {
+        TreeSet<Integer> example = new TreeSet<>();
+        for(int i = 0; i < 10; i++)
+            example.add((int) (Math.random() * 100));
+
+        for(Integer val : example)
+            System.out.printf("%d ", val);
+        System.out.println();
+
+        System.out.printf("Lower of 46 %d \n", example.lower(46));
+        System.out.printf("Floor of 46 %d \n", example.floor(46));
+    }
+
+    public static void hashSet() {
+        Set<String> countries = new HashSet<>();
+
+        countries.add("India");
+        countries.add("Japan");
+        countries.add("Switzerland");
+        countries.add("Japan");
+        countries.add("Brazil");
+
+        System.out.println(countries); // [Japan, Brazil, Switzerland, India]
+        System.out.println(countries.contains("Switzerland")); // true
     }
 
     public static void linkedHashSet() {
@@ -95,4 +109,5 @@ public class SetIntroduction {
 
         Objects.equals(numbers, Set.of(1, 2, 3)); // true
     }
+
 }

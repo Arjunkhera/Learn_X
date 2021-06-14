@@ -1,6 +1,6 @@
 package com.arjun.learn.algorithms.searching;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class BinarySearchTest {
 

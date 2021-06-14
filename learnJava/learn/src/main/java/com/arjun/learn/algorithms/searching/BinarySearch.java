@@ -48,15 +48,15 @@ public class BinarySearch {
      * @return
      */
     public int findNextLargest(int low, int high, int target) {
-        int mid, end = high;
+        int mid;
 
         while(low <= high) {
             mid = low + (high - low)/2;
 
-            if(this.arr[mid] <= target)
-                low = mid+1;
-            else
+            if(this.arr[mid] > target)
                 high = mid - 1;
+            else
+                low = mid + 1;
         }
 
         return low;
@@ -77,10 +77,10 @@ public class BinarySearch {
         while(low <= high) {
             mid = low + (high - low)/2;
 
-            if(this.arr[mid] >= target)
-                high = mid-1;
+            if(this.arr[mid] < target)
+                low = mid + 1;
             else
-                low = mid+1;
+                high = mid - 1;
         }
 
         return high;

@@ -1,0 +1,51 @@
+
+\
+java:S11921"FDefine a constant instead of duplicating this literal "Arjun" 3 times.(ÌÒŒ‘
+Q	java:S125	"<This block of commented-out lines of code should be removed.(ëøƒ½
+E
+java:S6212"/Declare this local variable with "var" instead.(¿ñàö
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÆáëÏ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ûÜÕ›
+N	java:S106"9Replace this use of System.out or System.err by a logger.(¥Èù±
+S	java:S106"9Replace this use of System.out or System.err by a logger.(µÎ›ÿÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(åÿ»àıÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÕÌô…ıÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¿€†”üÿÿÿÿ
+N	java:S106""9Replace this use of System.out or System.err by a logger.(‰ÏÖÆ
+S	java:S106#"9Replace this use of System.out or System.err by a logger.(°¿¡ıÿÿÿÿ
+N	java:S106&"9Replace this use of System.out or System.err by a logger.(ú–ãœ
+S	java:S106("9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(Òà´˜ıÿÿÿÿ
+S	java:S106,"9Replace this use of System.out or System.err by a logger.(¢Øï•ıÿÿÿÿ
+S	java:S106-"9Replace this use of System.out or System.err by a logger.(±ë®òÿÿÿÿÿ
+S	java:S106."9Replace this use of System.out or System.err by a logger.(Œ¥½ÿÿÿÿÿ
+S	java:S106/"9Replace this use of System.out or System.err by a logger.(¡¯ ¶ûÿÿÿÿ
+N	java:S1061"9Replace this use of System.out or System.err by a logger.(ÌÒŒ‘
+E
+java:S16111"/Remove the parentheses around the "k" parameter(ÌÒŒ‘
+S	java:S1063"9Replace this use of System.out or System.err by a logger.(Ú´Ó‚üÿÿÿÿ
+N	java:S1065"9Replace this use of System.out or System.err by a logger.(â¡œŸ
+S	java:S1067"9Replace this use of System.out or System.err by a logger.(áÅ¸™ûÿÿÿÿ
+S	java:S1068"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ
+E
+java:S6212="/Declare this local variable with "var" instead.(¿ñàö
+N	java:S106F"9Replace this use of System.out or System.err by a logger.(éòË¼
+S	java:S106G"9Replace this use of System.out or System.err by a logger.(üàºùÿÿÿÿ
+N	java:S106H"9Replace this use of System.out or System.err by a logger.(ª½‰Æ
+[
+java:S1854O"@Remove this useless assignment to local variable "friendPhones".(²ˆˆüÿÿÿÿ
+W
+java:S1854M"<Remove this useless assignment to local variable "emptyMap".(ø×öêøÿÿÿÿ
+N	java:S106_"9Replace this use of System.out or System.err by a logger.(¨”Ğÿ
+E
+java:S6212k"/Declare this local variable with "var" instead.(û–Ÿ
+E
+java:S6212l"/Declare this local variable with "var" instead.(’şØº
+S	java:S106n"9Replace this use of System.out or System.err by a logger.(âÌ€·øÿÿÿÿ
+N	java:S106o"9Replace this use of System.out or System.err by a logger.(²öªŞ
+N	java:S106p"9Replace this use of System.out or System.err by a logger.(ÜÕ±©
+N	java:S106q"9Replace this use of System.out or System.err by a logger.(Ù³ˆÒ
+H
+java:S1481M"-Remove this unused "emptyMap" local variable.(ø×öêøÿÿÿÿ
+L
+java:S1481O"1Remove this unused "friendPhones" local variable.(²ˆˆüÿÿÿÿ

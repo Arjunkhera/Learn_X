@@ -1,43 +1,43 @@
 package com.arjun.learn.algorithms.trees;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
+import java.util.List;
 
 public class Traversal {
 
-    public void InOrderRecursive(TreeNode root) {
-        if(root == null) return;
-        solve(root);
+    public List<Integer> InOrderRecursive(TreeNode root) {
+        List<Integer> output = new ArrayList<>();
+
+        if(root != null)
+            solve(root, output);
+        return output;
     }
 
-    public void solve(TreeNode root) {
+    public void solve(TreeNode root, List<Integer> output) {
         if(root.left != null)
-            solve(root.left);
-        System.out.println(root.data);
+            solve(root.left, output);
+        output.add(root.val);
         if(root.right != null)
-            solve(root.right);
+            solve(root.right, output);
     }
 
-    public void InOrderStack(TreeNode root) {
+    public List<Integer> InOrderStack(TreeNode root) {
+        List<Integer> output = new ArrayList<>();
         Deque<TreeNode> stack = new ArrayDeque<>();
-        while(root != null) {
-            stack.offerLast(root);
-            root = root.left;
-        }
 
-        while(!stack.isEmpty()) {
-            TreeNode cur = stack.pollLast();
-            System.out.println(cur.data);
-
-            cur = cur.right;
-            while(cur != null) {
-                stack.offerLast(cur);
-                cur = cur.left;
+        while(root != null || !stack.isEmpty()) {
+            while(root != null) {
+                stack.push(root);
+                root = root.left;
             }
-        }
-    }
 
-    public void InOrderMorris(TreeNode root) {
-        System.out.println("ToDo");
+            root = stack.pop();
+            output.add(root.val);
+            root = root.right;
+        }
+
+        return output;
     }
 }

@@ -1,6 +1,6 @@
 package com.arjun.learn.leetcode;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Q500to600Test {
 
