@@ -7,7 +7,7 @@ public class SetIntroduction {
         // introduction();
         System.out.println("---------------");
 
-        sortedSet();
+        // sortedSet();
         navigableSet();
     }
 
@@ -45,16 +45,44 @@ public class SetIntroduction {
     }
 
     public static void navigableSet() {
-        TreeSet<Integer> example = new TreeSet<>();
-        for(int i = 0; i < 10; i++)
-            example.add((int) (Math.random() * 100));
+        NavigableSet<Integer> navigableSet = new TreeSet<>(List.of(1, 3, 4, 7, 11, 14, 14, 19, 24));
 
-        for(Integer val : example)
+        // Print in Ascending order
+        for(Integer val : navigableSet)
             System.out.printf("%d ", val);
         System.out.println();
 
-        System.out.printf("Lower of 46 %d \n", example.lower(46));
-        System.out.printf("Floor of 46 %d \n", example.floor(46));
+        // Remove first element
+        navigableSet.pollFirst(); // removes 1
+        // Remove last element
+        navigableSet.pollLast(); // removes 24
+
+        // Print in Descending order
+        Iterator<Integer> iterator = navigableSet.descendingIterator();
+        while (iterator.hasNext())
+            System.out.printf("%d ", iterator.next());
+        System.out.println();
+
+        // Obtain the whole set in reverse
+        NavigableSet<Integer> reversedSet = navigableSet.descendingSet();
+
+        System.out.printf("Lower of 14 : %d \n", navigableSet.lower(14)); // 11
+        System.out.printf("Floor of 14 : %d \n", navigableSet.floor(14)); // 14
+        System.out.printf("Ceiling of 14 : %d \n", navigableSet.ceiling(14)); // 14
+        System.out.printf("Higher of 14 : %d \n", navigableSet.higher(14)); // 19
+
+        // Variations of headset and tailset
+        // use the sorted set method
+        SortedSet<Integer> headSetNormal = navigableSet.headSet(14);
+        for(Integer val : headSetNormal)
+            System.out.printf("%d ", val);
+        System.out.println("----");
+
+        // use boolean to indicate inclusion/exclusion of endpoints
+        NavigableSet<Integer> headSetIncluded = navigableSet.headSet(14, true);
+        for(Integer val : headSetIncluded)
+            System.out.printf("%d ", val);
+        System.out.println("----");
     }
 
     public static void hashSet() {

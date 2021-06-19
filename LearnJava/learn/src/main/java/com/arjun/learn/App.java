@@ -2,6 +2,9 @@ package com.arjun.learn;
 
 
 import com.arjun.learn.algorithms.dynamicprogramming.KMP;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.TreeSet;
 import org.apache.commons.io.FileUtils;
 
@@ -13,10 +16,15 @@ import java.util.Set;
 
 
 public class App {
-    public static void main( String[] args ) throws IOException {
+    public static void main(String[] args ) throws IOException {
         int a = 5;
         String fromInt = String.valueOf(a);
         int fromString = Integer.parseInt(fromInt);
+
+        List<Integer> check = new ArrayList<>();
+        check.add(2);
+        check.add(3);
+        System.out.println(check.toString());
 
     }
 
