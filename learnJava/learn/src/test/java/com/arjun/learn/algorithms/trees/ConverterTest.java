@@ -1,7 +1,5 @@
-package com.arjun.learn.algorithms.searching;
+package com.arjun.learn.algorithms.trees;
 
-import com.arjun.learn.algorithms.trees.Converter;
-import com.arjun.learn.algorithms.trees.TreeNode;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

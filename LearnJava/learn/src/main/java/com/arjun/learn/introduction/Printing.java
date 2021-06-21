@@ -1,60 +1,73 @@
-package com.arjun.introduction;
+package com.arjun.learn.introduction;
 
-import java.util.Scanner;
+import java.util.Locale;
 
 public class Printing {
-    public static void main(String[] args) {
 
-        printing();
-        System.out.println("--------");
+  public void unformattedPrinting() {
+    // Print with a newline at the end
+    System.out.println("Hello World");
 
-        readingInput();
-        System.out.println("--------");
+    // Print without a newline
+    System.out.print("first ");
+    System.out.print("second ");
+    System.out.println("");
+  }
 
-        comments();
-        System.out.println("--------");
-        
-    }
+  public void formattedOutputPrintf() {
+    /*
+    Following two signatures are used for formatted outputs
+        System.out.printf(format, arguments);
+        System.out.printf(locale, format, arguments);
+    */
 
-    public static void printing() {
-        // Print with a newline at the end
-        System.out.println("Hello World");
 
-        // Print without a newline
-        System.out.print("first ");
-        System.out.print("second ");
-        System.out.println("");
-    }
+    /*
+      Format Specifier Syntax
+      %[flags][width][.precision]conversion-character
 
-    public static void readingInput() {
-        Scanner scanner = new Scanner(System.in);
+      Conversion Characters
+        s formats strings.
+        d formats decimal integers.
+        f formats floating-point numbers.
+        t formats date/time values.
+    */
 
-        String line = scanner.nextLine();
-        System.out.println(line);
+    // Booleans
+    System.out.println("Booleans");
+    System.out.printf("%b%n", null);
+    System.out.printf("%B%n", false);
+    System.out.printf("%B%n", 5.3);
+    System.out.printf("%b%n", "random text");
 
-        int number = scanner.nextInt();
-        System.out.println(number);
+    // Strings
+    System.out.println("Strings");
+    String firstName = "Arjun", lastName = "Khera";
+    // Use capital format specifier for Upper Case output
+    System.out.printf("First Name:[%s], Last Name:[%S]%n", firstName, lastName);
+    // We can specify character padding through width
+    // Padding is by default on left size
+    // Length of padding is size of argument minus provided length
+    System.out.printf("%3s%n", firstName); // zero padding since 3 < 5
+    System.out.printf("%7s%n", firstName); // padding of two on left
+    System.out.printf("%-7s %s%n", firstName, lastName); // padding of two on right
+    // Control length of string using precision
+    System.out.printf("%7.3s%n", firstName); // padding of four on left and 3 chars from string
 
-        double decimalNumber = scanner.nextDouble();
-        System.out.println(decimalNumber);
+    // Characters
+    System.out.println("Characters");
+    System.out.printf("%c%n", 's');
+    System.out.printf("%C%n", 's');
 
-        String string = scanner.next();
-        System.out.println(string);
-    }
+    // Integers
+    System.out.println("Integers");
+    System.out.printf("simple integer: %d%n", 10000L);
+    System.out.printf(Locale.US, "%,d %n", 10000);
+    System.out.printf(Locale.ITALY, "%,d %n", 10000);
 
-    /**
-     * Example of Javadoc comments
-     */
-    public static void comments() {
-        System.out.println("Section on comments");
-
-        // Single line comments
-
-        /*
-        Multi
-        Line
-        Comments
-         */
-    }
+    // Float and Double
+    System.out.println("Floating Numbers");
+    System.out.printf("'%5.2f'%n", 5.1473);
+  }
 }
 

@@ -1,4 +1,4 @@
-package com.arjun.inputoutput;
+package com.arjun.learn.inputoutput;
 
 import java.util.Scanner;
 import java.util.stream.IntStream;
@@ -6,6 +6,23 @@ import java.util.stream.IntStream;
 public class ReadingInputs {
     public static void main(String[] args) {
         differenceBetweenNextAndNextLine();
+    }
+
+    public static void introduction() {
+        Scanner scanner = new Scanner(System.in);
+
+        String line = scanner.nextLine();
+        System.out.println(line);
+
+        int number = scanner.nextInt();
+        System.out.println(number);
+
+        double decimalNumber = scanner.nextDouble();
+        System.out.println(decimalNumber);
+
+        String string = scanner.next();
+        System.out.println(string);
+
     }
 
     public static void differenceBetweenNextAndNextLine() {
