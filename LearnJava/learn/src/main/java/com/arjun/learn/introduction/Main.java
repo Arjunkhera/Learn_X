@@ -3,11 +3,8 @@ package com.arjun.learn.introduction;
 public class Main {
 
   public static void main(String[] args) {
-    double a = 8;
-    double b = 5;
-    double c = a / b + 1.1;
-    System.out.println(a/b);
     // printing();
+    numericLiterals();
   }
 
   // Printing
@@ -25,6 +22,28 @@ public class Main {
     System.out.printf("%n[END] Formatted Output %n");
   }
 
+  // Numbers in different bases and their conversions with Strings
+  public static void numericLiterals() {
+    NumericLiterals numericLiterals = new NumericLiterals();
+
+    System.out.print("-------------------------------");
+    System.out.printf("%n[START] Converting Number to String %n");
+    numericLiterals.convertNumberToString();
+    System.out.printf("%n[END] Converting Number to String %n");
+
+    System.out.print("-------------------------------");
+    System.out.printf("%n[START] Converting String to Number %n");
+    numericLiterals.convertingStringToNumber();
+    System.out.printf("%n[END] Converting String to Number %n");
+
+    System.out.print("-------------------------------");
+    System.out.printf("%n[START] Get Binary Array from number 13 %n");
+    numericLiterals.getBinaryArrayFromNumber(13);
+    System.out.printf("%n[START] Get Binary Array from number -13 %n");
+    numericLiterals.getBinaryArrayFromNumber(-13);
+    System.out.printf("%n[END] Get Binary Array from number%n");
+
+  }
 
   public static void enums() {
     // Initialising an enum

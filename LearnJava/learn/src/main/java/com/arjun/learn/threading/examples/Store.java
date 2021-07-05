@@ -1,4 +1,4 @@
-package com.arjun.threading.examples;
+package com.arjun.learn.threading.examples;
 
 public class Store {
 

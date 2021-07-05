@@ -3,9 +3,11 @@ package com.arjun.learn;
 
 import com.arjun.learn.algorithms.dynamicprogramming.KMP;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.TreeSet;
+import java.util.UUID;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -16,16 +18,16 @@ import java.util.Set;
 
 
 public class App {
+
     public static void main(String[] args ) throws IOException {
-        int a = 5;
-        String fromInt = String.valueOf(a);
-        int fromString = Integer.parseInt(fromInt);
+        System.out.println(Math.ceil(5.0/2));
+        System.out.println((int)Math.ceil(5.0/2));
+    }
 
-        List<Integer> check = new ArrayList<>();
-        check.add(2);
-        check.add(3);
-        System.out.println(check.toString());
-
+    public static int gcd(int a, int b) {
+        if(b == 0)
+            return a;
+        return gcd(b, a%b);
     }
 
     public void testOld() {

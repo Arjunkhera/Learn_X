@@ -58,6 +58,8 @@ public class Variables {
     // lossy conversion
     long bigLong =  1_200_000_002L;
     float bigFloat = bigLong; // 1.2E9 (= 1_200_000_000)
+
+
   }
 
   public void explicitConversions() {

@@ -10,17 +10,15 @@ public class Traversal {
     public static List<Integer> InOrderRecursive(TreeNode root) {
         List<Integer> output = new ArrayList<>();
 
-        if(root != null)
-            InOrderRecursiveFunction(root, output);
+        InOrderRecursiveFunction(root, output);
         return output;
     }
 
     public static void InOrderRecursiveFunction(TreeNode root, List<Integer> output) {
-        if(root.left != null)
-            InOrderRecursiveFunction(root.left, output);
+        if(root == null) return;
+        InOrderRecursiveFunction(root.left, output);
         output.add(root.val);
-        if(root.right != null)
-            InOrderRecursiveFunction(root.right, output);
+        InOrderRecursiveFunction(root.right, output);
     }
 
     public static List<Integer> InOrderStack(TreeNode root) {
@@ -66,5 +64,73 @@ public class Traversal {
         }
 
         return res;
+    }
+
+    public static List<Integer> PreOrderRecursive(TreeNode root) {
+        List<Integer> output = new ArrayList<>();
+
+        PreOrderRecursiveFunction(root, output);
+        return output;
+    }
+
+    public static void PreOrderRecursiveFunction(TreeNode root, List<Integer> output) {
+        if(root == null) return;
+
+        output.add(root.val);
+        PreOrderRecursiveFunction(root.left, output);
+        PreOrderRecursiveFunction(root.right, output);
+    }
+
+    public static List<Integer> PreOrderStack(TreeNode root) {
+        List<Integer> output = new ArrayList<>();
+        if(root == null) return output;
+
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        stack.push(root);
+
+        while(!stack.isEmpty()) {
+            TreeNode cur = stack.pop();
+            output.add(cur.val);
+            if(cur.right != null)
+                stack.push(cur.right);
+            if(cur.left != null)
+                stack.push(cur.left);
+        }
+
+        return output;
+    }
+
+    public static List<Integer> PostOrderRecursive(TreeNode root) {
+        List<Integer> output = new ArrayList<>();
+
+        PostOrderRecursiveFunction(root, output);
+        return output;
+    }
+
+    public static void PostOrderRecursiveFunction(TreeNode root, List<Integer> output) {
+        if(root == null) return;
+
+        PostOrderRecursiveFunction(root.left, output);
+        PostOrderRecursiveFunction(root.right, output);
+        output.add(root.val);
+    }
+
+    public static List<Integer> PostOrderStack(TreeNode root) {
+        List<Integer> output = new ArrayList<>();
+        if(root == null) return output;
+
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        stack.push(root);
+
+        while(!stack.isEmpty()) {
+            TreeNode cur = stack.pop();
+            output.add(cur.val);
+            if(cur.right != null)
+                stack.push(cur.right);
+            if(cur.left != null)
+                stack.push(cur.left);
+        }
+
+        return output;
     }
 }

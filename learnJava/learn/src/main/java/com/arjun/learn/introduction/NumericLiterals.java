@@ -2,23 +2,9 @@ package com.arjun.learn.introduction;
 
 import java.util.Arrays;
 
-public class BitShift {
+public class NumericLiterals {
 
-    public static void main(String[] args) {
-        convertNumberToString();
-        System.out.println("-------");
-
-        convertingStringToNumber();
-        System.out.println("-------");
-
-        getBinaryArrayFromNumber(13);
-        System.out.println("-------");
-
-        getBinaryArrayFromNumber(-13);
-        System.out.println("-------");
-    }
-
-    public static void convertNumberToString() {
+    public void convertNumberToString() {
         // Inbuilt functions : leading zeros are never printed
         int n = 13;
         System.out.println("Integer to Octal: " + Integer.toString(n,8)); // decimal to octal
@@ -36,7 +22,7 @@ public class BitShift {
         System.out.println("Negative Integer to Hexadecimal direct method: " + Integer.toHexString(-13));
     }
 
-    public static void convertingStringToNumber() {
+    public void convertingStringToNumber() {
         // For positive numbers
         System.out.println("Octal to Integer: " + Integer.parseInt("15", 8));
         System.out.println("Binary to Integer: " + Integer.parseInt("1101", 2));
@@ -52,7 +38,7 @@ public class BitShift {
         System.out.println("Binary to Integer without sign: " + Integer.parseUnsignedInt("11111111111111111111111111110011", 2));
     }
 
-    public static void backAndForth() {
+    public void backAndForth() {
         // Gives magnitude in binary along with sign for negative values
         System.out.println(Integer.toString(-1,2)); // -1
         // Give the int value of binary representation along with sign
@@ -65,7 +51,7 @@ public class BitShift {
 
     }
 
-    public static void getBinaryArrayFromNumber(int number) {
+    public void getBinaryArrayFromNumber(int number) {
         int[] arr = new int[Integer.SIZE];
         int j = Integer.SIZE - 1;
 

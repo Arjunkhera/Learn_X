@@ -35,4 +35,28 @@ public class TraversalTest {
         List<Integer> output = Traversal.InOrderMorris(tree.root);
         assertEquals(output, List.of(1,2,3,4,5,7));
     }
+
+    @Test
+    public void preOrderRecursiveTest() {
+        List<Integer> output = Traversal.PreOrderRecursive(tree.root);
+        assertEquals(output, List.of(4,2,1,3,7,5));
+    }
+
+    @Test
+    public void preOrderIterativeTest() {
+        List<Integer> output = Traversal.PreOrderStack(tree.root);
+        assertEquals(output, List.of(4,2,1,3,7,5));
+    }
+
+    @Test
+    public void postOrderRecursiveTest() {
+        List<Integer> output = Traversal.PostOrderRecursive(tree.root);
+        assertEquals(output, List.of(1,3,2,5,7,4));
+    }
+
+    @Test
+    public void postOrderIterativeTest() {
+        List<Integer> output = Traversal.PostOrderStack(tree.root);
+        assertEquals(output, List.of(1,3,2,5,7,4));
+    }
 }

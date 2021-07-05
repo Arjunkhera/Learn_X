@@ -1,4 +1,4 @@
-package com.arjun.introduction;
+package com.arjun.learn.introduction;
 
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
