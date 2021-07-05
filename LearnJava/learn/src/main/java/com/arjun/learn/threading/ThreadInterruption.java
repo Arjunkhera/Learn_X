@@ -1,6 +1,6 @@
-package com.arjun.threading;
+package com.arjun.learn.threading;
 
-import com.arjun.threading.examples.Store;
+import com.arjun.learn.threading.examples.Store;
 
 public class ThreadInterruption {
     public static void main(String[] args) throws InterruptedException {
