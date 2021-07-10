@@ -4,7 +4,8 @@ public class Main {
 
   public static void main(String[] args) {
     // printing();
-    numericLiterals();
+    // numericLiterals();
+    strings();
   }
 
   // Printing
@@ -42,6 +43,27 @@ public class Main {
     System.out.printf("%n[START] Get Binary Array from number -13 %n");
     numericLiterals.getBinaryArrayFromNumber(-13);
     System.out.printf("%n[END] Get Binary Array from number%n");
+
+  }
+
+  // String Introduction
+  public static void strings() {
+    Strings strings = new Strings();
+
+    System.out.print("-------------------------------");
+    System.out.printf("%n[START] String Introduction %n");
+    strings.introduction();
+    System.out.printf("%n[END] String Introduction %n");
+
+    System.out.print("-------------------------------");
+    System.out.printf("%n[START] String Initialisation %n");
+    strings.waysToInitialise();
+    System.out.printf("%n[END] String Initialisation %n");
+
+    System.out.print("-------------------------------");
+    System.out.printf("%n[START] String Common Methods %n");
+    strings.commonMethods();
+    System.out.printf("%n[END] String Common Methods %n");
 
   }
 

@@ -1,4 +1,4 @@
-package com.arjun.functional.streams;
+package com.arjun.learn.functional.streams;
 
 import java.util.ArrayList;
 import java.util.Arrays;
