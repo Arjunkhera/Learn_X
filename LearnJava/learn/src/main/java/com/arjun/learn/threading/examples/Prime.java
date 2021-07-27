@@ -1,4 +1,4 @@
-package com.arjun.threading.examples;
+package com.arjun.learn.threading.examples;
 
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;

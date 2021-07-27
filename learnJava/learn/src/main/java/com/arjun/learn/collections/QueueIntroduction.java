@@ -2,15 +2,8 @@ package com.arjun.learn.collections;
 
 import java.util.*;
 
-public class QueueExample {
-    public static void main(String[] args) {
-        //deque();
-        //dequeAsStack();
-        priorityQueue();
-        //priorityQueueCustomComparator();
-    }
-
-    public static void deque() {
+public class QueueIntroduction {
+    public void queueInterface() {
         Queue<String> q = new ArrayDeque<>();
 
         q.offer("first");
@@ -31,17 +24,17 @@ public class QueueExample {
     public static void dequeAsStack() {
         Deque<String> stack = new ArrayDeque<>();
 
-        stack.offerLast("first");
-        stack.offerLast("second");
-        stack.offerLast("third");
+        stack.push("first");
+        stack.push("second");
+        stack.push("third");
 
         System.out.println(stack); // [first, second, third]
 
-        System.out.println(stack.pollLast()); // third
-        System.out.println(stack.pollLast()); // second
-        System.out.println(stack.pollLast()); // first
+        System.out.println(stack.poll()); // third
+        System.out.println(stack.poll()); // second
+        System.out.println(stack.poll()); // first
 
-        System.out.println(stack.pollLast()); // null
+        System.out.println(stack.poll()); // null
     }
 
     public static void priorityQueue() {

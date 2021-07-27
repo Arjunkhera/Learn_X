@@ -45,8 +45,8 @@ public class Strings {
     // Back to array
     char[] charArrayBack = first.toCharArray();
     System.out.printf("Back to char[] array %s%n", Arrays.toString(charArrayBack));
-    Character[] characterArrayBack = first.chars().mapToObj(ch -> (Character) ch);
-    System.out.printf("Back to Character[] array %s%n", Arrays.toString(characterArrayBack));
+    // Character[] characterArrayBack = first.chars().mapToObj(ch -> (Character) ch);
+    // System.out.printf("Back to Character[] array %s%n", Arrays.toString(characterArrayBack));
   }
 
   public void commonMethods() {

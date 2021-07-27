@@ -3,8 +3,8 @@ package com.arjun.learn.introduction;
 public class Main {
 
   public static void main(String[] args) {
-    // printing();
-    // numericLiterals();
+    printing();
+    numericLiterals();
     strings();
   }
 
@@ -67,6 +67,7 @@ public class Main {
 
   }
 
+  // Enum Introduction
   public static void enums() {
     // Initialising an enum
     Enum currentChargeLevel = Enum.FULL;

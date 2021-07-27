@@ -5,12 +5,8 @@ import java.util.Collection;
 import java.util.List;
 
 public class CollectionInterface {
-    public static void main(String[] args) {
-        introduction();
-    }
-
     // some common methods for collection interface
-    public static void introduction() {
+    public void introduction() {
         Collection<String> example = new ArrayList<>();
 
         example.add("1");
