@@ -98,4 +98,30 @@ public class App {
         + "      }\n"
         + "    ]";
   }
+
+  class Solution {
+    long mod = 1000000007;
+
+    public int countGoodNumbers(long n) {
+      long ans = fast(20, n/2);
+      if(n % 2 == 1) ans = (ans*5) % mod;
+
+      return (int) ans;
+    }
+
+    public long fast(int base, long power) {
+      if(power == 0) return 1;
+      if(power == 1) return base;
+
+      long square = base*base;
+      long start = 2;
+      while(start * start <= power) {
+        square = (square*square) % mod;
+        start *= start;
+      }
+
+      System.out.printf("power %d, square %d, sending %d", power, square, power-start);
+      return (square * fast(base, power - start)) % mod;
+    }
+  }
 }

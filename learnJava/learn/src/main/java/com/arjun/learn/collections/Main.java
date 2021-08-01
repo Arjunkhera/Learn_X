@@ -1,11 +1,25 @@
 package com.arjun.learn.collections;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class Main {
 
   public static void main(String[] args) {
     // iteratorsIntroduction();
     // collectionIntroduction();
-    queueIntroduction();
+    // queueIntroduction();
+
+    int a = 5;
+    int b = 2;
+    System.out.println((double)a/b);
+    Double d = (double) Integer.MIN_VALUE;
+    int[] arr = new int[]{1,2};
+    List<Integer> list = new ArrayList<>();
+    Set<Integer> set = new HashSet<>(list);
+
   }
 
   public static void iteratorsIntroduction() {
@@ -43,5 +57,11 @@ public class Main {
     System.out.printf("%n[START] Queue Introduction %n");
     queueIntroduction.queueInterface();
     System.out.printf("%n[END] Queue Introduction %n");
+
+    System.out.print("-------------------------------");
+    System.out.printf("%n[START] Priority Queue Introduction %n");
+    queueIntroduction.priorityQueue();
+    System.out.printf("%n[END] Priority Queue Introduction %n");
+
   }
 }
