@@ -22,7 +22,7 @@ public class MinimumWindowSubstring {
         Map<Character, Integer> store = new HashMap<>();
         pattern.chars().
                 forEach(ch -> store.put((char) ch, store.getOrDefault((char)ch, 0) + 1));
-
+        
         int length = Integer.MAX_VALUE;
         int startIndex = 0;
         int matched = 0;

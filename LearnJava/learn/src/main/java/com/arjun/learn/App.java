@@ -10,6 +10,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -19,36 +21,9 @@ import org.apache.commons.io.FileUtils;
 
 public class App {
 
-  private static final String DEFAULT_HOSTNAME = "amazonaws.com";
+  public static void main(String[] args) {
+    Character.is
 
-  public static void main(String[] args) throws IOException {
-    javax.net.ssl.HttpsURLConnection.setDefaultHostnameVerifier(
-        (String hostname, javax.net.ssl.SSLSession sslSession) ->
-            hostname.endsWith(DEFAULT_HOSTNAME));
-
-    String url = "https://gcsstorage1.blob.core.windows.net/gcstest1/MDConnector/MDTest/Test_16269425/2021-07-26/1627270882527/AnotherNewFile.md?sp=r&st=2021-07-26T17:13:29Z&se=2021-07-27T01:13:29Z&spr=https&sv=2020-08-04&sr=b&sig=n2D5%2FpAuL6CZfUy1zFAC3oWM%2BkhcrZMy7w%2F4EBB5kJA%3D";
-    File file = new File("temp.md");
-    file.createNewFile();
-    FileUtils.copyURLToFile(new URL(url), file);
-
-    // checkEmpty().forEach(System.out::println);
-  }
-
-  public static List<Integer> checkEmpty() {
-    List<Integer> empty = List.of(1,2,3);
-    return empty.stream().filter(x -> x > 2).collect(Collectors.toList());
-  }
-
-  public static List<String> getFilesInDirectory(String path) throws IOException {
-    List<String> files;
-    try (Stream<Path> paths = Files.walk(Paths.get(path))) {
-      files = paths
-          .filter(Files::isRegularFile)
-          .map(String::valueOf)
-          .collect(Collectors.toList());
-    }
-
-    return files;
   }
 
   public static void Jackson() throws IOException {
@@ -98,30 +73,5 @@ public class App {
         + "      }\n"
         + "    ]";
   }
-
-  class Solution {
-    long mod = 1000000007;
-
-    public int countGoodNumbers(long n) {
-      long ans = fast(20, n/2);
-      if(n % 2 == 1) ans = (ans*5) % mod;
-
-      return (int) ans;
-    }
-
-    public long fast(int base, long power) {
-      if(power == 0) return 1;
-      if(power == 1) return base;
-
-      long square = base*base;
-      long start = 2;
-      while(start * start <= power) {
-        square = (square*square) % mod;
-        start *= start;
-      }
-
-      System.out.printf("power %d, square %d, sending %d", power, square, power-start);
-      return (square * fast(base, power - start)) % mod;
-    }
-  }
 }
+

@@ -2,6 +2,7 @@ package com.arjun.learn.collections;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
@@ -17,9 +18,14 @@ public class Main {
     System.out.println((double)a/b);
     Double d = (double) Integer.MIN_VALUE;
     int[] arr = new int[]{1,2};
-    List<Integer> list = new ArrayList<>();
-    Set<Integer> set = new HashSet<>(list);
+    List<Integer> list = new LinkedList<>();
 
+    Set<List<Integer>> set = new HashSet<>();
+    set.add(List.of(1,2));
+    set.add(List.of(2,3));
+    set.add(List.of(1,2));
+
+    System.out.println(set);
   }
 
   public static void iteratorsIntroduction() {

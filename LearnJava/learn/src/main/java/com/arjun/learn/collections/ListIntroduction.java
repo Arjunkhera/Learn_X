@@ -58,5 +58,16 @@ public class ListIntroduction {
         // the following would give error since converted is immutable
         // converted.add(3);
     }
+
+    public void sortingListOfLists(List<List<Integer>> lists) {
+        lists.sort((l1, l2) -> {
+            for (int i = 0; i < Math.min(l1.size(), l2.size()); i++) {
+                int comp = Integer.compare(l1.get(i), l2.get(i));
+                if (comp != 0)
+                    return comp;
+            }
+            return Integer.compare(l1.size(), l2.size());
+        });
+    }
 }
 

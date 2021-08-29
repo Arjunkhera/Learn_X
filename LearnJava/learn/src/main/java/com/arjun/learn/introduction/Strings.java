@@ -130,6 +130,13 @@ public class Strings {
     System.out.println(original + "::" + reverse);
   }
 
+  public void stringSort() {
+    String str = "this is an unsorted string";
+    char[] charArr = str.toCharArray();
+    Arrays.sort(charArr);
+    String sortedStr = String.valueOf(charArr);
+  }
+
   /**
    * Example program for counting spaces
    */

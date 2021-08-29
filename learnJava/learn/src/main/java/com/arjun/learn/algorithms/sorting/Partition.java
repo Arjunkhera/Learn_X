@@ -26,10 +26,6 @@ public class Partition {
      * Keep partitioning until returned index is equal to target index
      * For an unsorted we ensure that all elements to left of index are smaller
      * and elements to the right of index are greater
-     * @param input
-     * @param start
-     * @param end
-     * @param targetIndex
      */
     public static void semiSort(int[] input, int start, int end, int targetIndex) {
         int index = start;
