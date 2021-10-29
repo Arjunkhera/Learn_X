@@ -1,0 +1,26 @@
+
+M	java:S106"9Replace this use of System.out or System.err by a logger.(Ä¦¶
+M	java:S106"9Replace this use of System.out or System.err by a logger.(Ä¦¶
+N	java:S106"9Replace this use of System.out or System.err by a logger.(›ë¬¿
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ú¯´™
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÇÚÜ®ıÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¶äõéüÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(­ŒĞÊüÿÿÿÿ
+Q
+java:S1854";Remove this useless assignment to local variable "minHeap".(¾Ó¬Ñ
+\
+java:S18548"FRemove this useless assignment to local variable "euclideanDistances".(²Éø
+B
+java:S1481",Remove this unused "minHeap" local variable.(¾Ó¬Ñ
+S	java:S106*"9Replace this use of System.out or System.err by a logger.(¬ÜÂÿÿÿÿÿ
+N	java:S106+"9Replace this use of System.out or System.err by a logger.(ûöÉ
+M	java:S106."9Replace this use of System.out or System.err by a logger.(Ì¦üg
+S	java:S1061"9Replace this use of System.out or System.err by a logger.(Ó‡ËÛøÿÿÿÿ
+M	java:S1063"9Replace this use of System.out or System.err by a logger.(ÖÏ«-
+M
+java:S14818"7Remove this unused "euclideanDistances" local variable.(²Éø
+N	java:S106C"9Replace this use of System.out or System.err by a logger.(Â”¢¾
+N	java:S106E"9Replace this use of System.out or System.err by a logger.(²äåÎ
+N	java:S106F"9Replace this use of System.out or System.err by a logger.(Å¾òŞ
+N	java:S106G"9Replace this use of System.out or System.err by a logger.(ıâ°ù
+N	java:S106H"9Replace this use of System.out or System.err by a logger.(ªô™ç

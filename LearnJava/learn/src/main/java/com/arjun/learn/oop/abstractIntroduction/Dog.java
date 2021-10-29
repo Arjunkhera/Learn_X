@@ -1,4 +1,4 @@
-package com.arjun.oop.abstractIntroduction;
+package com.arjun.learn.oop.abstractIntroduction;
 
 class Dog extends Pet {
 

@@ -1,0 +1,12 @@
+
+P	java:S125""<This block of commented-out lines of code should be removed.(ùÀ™a
+N	java:S1065"9Replace this use of System.out or System.err by a logger.(‰Æ¨Š
+S	java:S106A"9Replace this use of System.out or System.err by a logger.(‰ıâÓûÿÿÿÿ
+N	java:S106L"9Replace this use of System.out or System.err by a logger.(©Ìİ
+S	java:S106Q"9Replace this use of System.out or System.err by a logger.(™¶â¹şÿÿÿÿ
+l
+java:S1104"QMake graph a static final constant or non-public and provide accessors if needed.(±º¸åùÿÿÿÿ
+^
+java:S38244"HReplace this "Map.containsKey()" with a call to "Map.computeIfAbsent()".(ßç™
+c
+java:S3824@"HReplace this "Map.containsKey()" with a call to "Map.computeIfAbsent()".(ê•À©üÿÿÿÿ

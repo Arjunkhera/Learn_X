@@ -2,28 +2,107 @@ package com.arjun.learn;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.File;
 import java.io.IOException;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.time.Instant;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
-import org.apache.commons.io.FileUtils;
 
 public class App {
 
-  public static void main(String[] args) {
-    Character.is
+  static List<List<Integer>> paths = new ArrayList<>();
 
+  public static void main(String[] args) {
+    String first = "3";
+    String second = "34";
+    System.out.println(first.compareTo(second));
+  }
+
+//    actual(5);
+//    for(List<Integer> path : paths) {
+//      System.out.println(path);
+//    }
+
+
+  public static int formulaOne(int n) {
+    int res = 1;
+    for(int i = 1; i <= n-1; i++)
+      res *= i;
+    return res;
+  }
+
+  public static int formulaTwo(int n) {
+    double res = Math.pow(2, n-1) - 1;
+    return (int) res;
+  }
+
+  public static int formulaThree(int n) {
+    double res = Math.pow(n, n-1);
+    return (int) res;
+  }
+
+  public static int actual(int n) {
+    Map<Integer, List<Integer>> graph = new HashMap<>();
+
+    for(int i = 0; i < n; i++) {
+      for(int j = 0; j < n; j++)
+        if(i != j) {
+          graph.computeIfAbsent(i, k -> new ArrayList<>()).add(j);
+          // graph.computeIfAbsent(j, k -> new ArrayList<>()).add(i);
+        }
+    }
+
+    boolean[] visited = new boolean[n];
+    // return solve(0, n-1, graph, visited, new LinkedList<Integer>());
+    return solve(0, n-1, graph, visited);
+  }
+
+
+  public static int solve(int current, int end, Map<Integer, List<Integer>> graph, boolean[] visited) {
+    if(current == end) return 1;
+
+    visited[current] = true;
+    int count = 0;
+    for(Integer next : graph.get(current))
+      if(!visited[next])
+        count += solve(next, end, graph, visited);
+
+    visited[current] = false;
+    return count;
+  }
+
+
+  public static int solvePaths(int current, int end, Map<Integer, List<Integer>> graph, boolean[] visited, LinkedList<Integer> path) {
+    path.addLast(current);
+    if(current == end)  {
+      paths.add(new ArrayList<>(path));
+      path.removeLast();
+      return 1;
+    }
+
+    visited[current] = true;
+    int count = 0;
+    for(Integer next : graph.get(current))
+      if(!visited[next])
+        count += solvePaths(next, end, graph, visited, path);
+
+    path.removeLast();
+    visited[current] = false;
+    return count;
+  }
+
+  public static String check(String sourceRepoName) {
+    int indexOf = sourceRepoName.indexOf(".en");
+    if (indexOf != -1) {
+      sourceRepoName = sourceRepoName.substring(0, indexOf);
+    }
+
+    return sourceRepoName;
   }
 
   public static void Jackson() throws IOException {

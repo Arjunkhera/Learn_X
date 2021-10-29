@@ -66,10 +66,10 @@ public class QueueIntroduction {
 
     System.out.println(stack); // [first, second, third]
 
-    System.out.println(stack.poll()); // third
-    System.out.println(stack.poll()); // second
-    System.out.println(stack.poll()); // first
-
-    System.out.println(stack.poll()); // null
+    System.out.println(stack.pop()); // third
+    System.out.println(stack.pop()); // second
+    System.out.println(stack.pop()); // first
+    System.out.println(stack.pop()); // null
   }
 }
+

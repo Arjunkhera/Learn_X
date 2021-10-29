@@ -52,6 +52,7 @@ public class ComparableIntroduction {
         Arrays.sort(oneDimensionalArray);
         // Descending order ?
         // Arrays.sort(oneDimensionalArray, (x, y) -> y - x); // throws error
+        // manually reverse sorted array for descending order
 
         // Comparators require Objects
         int[][] twoDimensionalArray = new int[26][2];

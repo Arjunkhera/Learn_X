@@ -1,0 +1,64 @@
+
+U
+java:S1854"?Remove this useless assignment to local variable "listStrings".(ÒÒ÷•
+W
+java:S1854"BRemove this useless assignment to local variable "listArrInteger".(†Îä5
+Z
+java:S1854"?Remove this useless assignment to local variable "listStrings".(–ÉØùÿÿÿÿ
+]
+java:S1854"BRemove this useless assignment to local variable "listArrInteger".(¢Íä±úÿÿÿÿ
+X
+java:S1854!"=Remove this useless assignment to local variable "intStream".(Ôóª‰şÿÿÿÿ
+X
+java:S1854"=Remove this useless assignment to local variable "arrStream".(·Ê¸÷ùÿÿÿÿ
+N
+java:S1481"3Remove this unused "listArrInteger" local variable.(¢Íä±úÿÿÿÿ
+K
+java:S1481"0Remove this unused "listStrings" local variable.(–ÉØùÿÿÿÿ
+I
+java:S1481".Remove this unused "arrStream" local variable.(·Ê¸÷ùÿÿÿÿ
+I
+java:S1481!".Remove this unused "intStream" local variable.(Ôóª‰şÿÿÿÿ
+S
+java:S1854+"=Remove this useless assignment to local variable "primitive".(ƒ‹…ª
+V
+java:S1854(";Remove this useless assignment to local variable "wrapper".(“Š¤Îøÿÿÿÿ
+Q
+java:S1854&";Remove this useless assignment to local variable "wrapper".(ŒÉ¾„
+B
+java:S1481&",Remove this unused "wrapper" local variable.(ŒÉ¾„
+D
+java:S1481+".Remove this unused "primitive" local variable.(ƒ‹…ª
+U
+java:S1854;"?Remove this useless assignment to local variable "listStrings".(ä¢ó¸
+\
+java:S18549"ARemove this useless assignment to local variable "setArrInteger".(ØÃî…ÿÿÿÿÿ
+W
+java:S18548"ARemove this useless assignment to local variable "setArrInteger".(Ò­–
+U
+java:S18544"?Remove this useless assignment to local variable "listStrings".(®áç 
+S
+java:S1854G"=Remove this useless assignment to local variable "intStream".(Í±Ûø
+X
+java:S1854E"=Remove this useless assignment to local variable "arrStream".(»ÇŸ…ûÿÿÿÿ
+F
+java:S14814"0Remove this unused "listStrings" local variable.(®áç 
+H
+java:S14818"2Remove this unused "setArrInteger" local variable.(Ò­–
+I
+java:S1481E".Remove this unused "arrStream" local variable.(»ÇŸ…ûÿÿÿÿ
+D
+java:S1481G".Remove this unused "intStream" local variable.(Í±Ûø
+S
+java:S1854Q"=Remove this useless assignment to local variable "primitive".(¡•å¶
+Q
+java:S1854N";Remove this useless assignment to local variable "wrapper".(ÙÉ›Ù
+Q
+java:S1854L";Remove this useless assignment to local variable "wrapper".(ì©©·
+B
+java:S1481L",Remove this unused "wrapper" local variable.(ì©©·
+D
+java:S1481Q".Remove this unused "primitive" local variable.(¡•å¶
+\
+java:S1192
+"FDefine a constant instead of duplicating this literal "arjun" 3 times.(Â¤½–

@@ -1,31 +1,11 @@
 package com.arjun.learn.collections;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
-
 public class Main {
 
   public static void main(String[] args) {
-    // iteratorsIntroduction();
+    iteratorsIntroduction();
     // collectionIntroduction();
     // queueIntroduction();
-
-    int a = 5;
-    int b = 2;
-    System.out.println((double)a/b);
-    Double d = (double) Integer.MIN_VALUE;
-    int[] arr = new int[]{1,2};
-    List<Integer> list = new LinkedList<>();
-
-    Set<List<Integer>> set = new HashSet<>();
-    set.add(List.of(1,2));
-    set.add(List.of(2,3));
-    set.add(List.of(1,2));
-
-    System.out.println(set);
   }
 
   public static void iteratorsIntroduction() {

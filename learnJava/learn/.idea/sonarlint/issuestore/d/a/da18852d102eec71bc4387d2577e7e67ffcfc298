@@ -1,0 +1,16 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÕÊ‡–
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ñç¾øÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ûê¢ïùÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¼İí±şÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¹àË¹úÿÿÿÿ
+S	java:S106#"9Replace this use of System.out or System.err by a logger.(Ø÷‰‚úÿÿÿÿ
+Q
+java:S1764'"6Correct one of the identical argument sub-expressions.(Ì¶¥æşÿÿÿÿ
+X
+java:S18548"=Remove this useless assignment to local variable "converted".(ÙŠ€ÿÿÿÿÿ
+I
+java:S14818".Remove this unused "converted" local variable.(ÙŠ€ÿÿÿÿÿ
+V	java:S125;"<This block of commented-out lines of code should be removed.(î¾Ç¥úÿÿÿÿ
+t
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(÷‚ÂŞıÿÿÿÿ

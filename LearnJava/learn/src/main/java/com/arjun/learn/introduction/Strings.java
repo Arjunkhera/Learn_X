@@ -1,8 +1,33 @@
 package com.arjun.learn.introduction;
 
 import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class Strings {
+
+  public static void main(String[] args) {
+    Strings strings = new Strings();
+
+    System.out.println("Strings Introduction");
+    strings.introduction();
+    System.out.println("--------------------");
+
+    System.out.println("String Initialization");
+    strings.waysToInitialise();
+    System.out.println("--------------------");
+
+    System.out.println("String Common Methods");
+    strings.commonMethods();
+    System.out.println("--------------------");
+
+    System.out.println("String Builder Common Methods");
+    strings.stringBuilderCommonMethods();
+    System.out.println("--------------------");
+
+    System.out.println("String Sort");
+    strings.stringSort();
+    System.out.println("--------------------");
+  }
 
   public void introduction() {
     // Strings are immutable. Cannot modify the Characters by index
@@ -35,18 +60,16 @@ public class Strings {
     System.out.printf("From char[] using new %s%n", third);
     String fourth = new String(charArray, 2, 2);
     System.out.printf("From char[] with offset 2 and count 2 %s%n", fourth);
-    String fifth = String.valueOf(charArray);
+    String fifth = String.valueOf(charArray, 2, 3);
     System.out.printf("From char[] using value of %s%n", fifth);
 
     Character[] CharacterArray = new Character[]{'a', 'b', 'c'};
-    String sixth = String.valueOf(CharacterArray);
+    String sixth = Arrays.stream(CharacterArray).map(String::valueOf).collect(Collectors.joining());
     System.out.printf("From Character[] using value of %s%n", sixth);
 
     // Back to array
     char[] charArrayBack = first.toCharArray();
     System.out.printf("Back to char[] array %s%n", Arrays.toString(charArrayBack));
-    // Character[] characterArrayBack = first.chars().mapToObj(ch -> (Character) ch);
-    // System.out.printf("Back to Character[] array %s%n", Arrays.toString(characterArrayBack));
   }
 
   public void commonMethods() {
@@ -75,7 +98,7 @@ public class Strings {
     boolean flag;
     flag = name.startsWith("Arjun");
     System.out.println("String starts with Arjun ? " + flag);
-    flag = name.endsWith("String ends with Srivastava ? " + "Srivastava");
+    flag = name.endsWith("String ends with Khera? " + "Khera");
     System.out.println(flag);
 
     // Obtaining a substring
@@ -113,14 +136,22 @@ public class Strings {
     // Index Of
     String testIndex = "abcdefabcdef";
     System.out.printf("First Index of char a %d%n", testIndex.indexOf('a'));
-    System.out.printf("First Index of char a starting forwards from 3 is %d%n", testIndex.indexOf('a', 3));
+    System.out.printf("First Index of char a starting forwards from 3 is %d%n",
+        testIndex.indexOf('a', 3));
     System.out.printf("Last Index of char a %d%n", testIndex.lastIndexOf('a'));
-    System.out.printf("Last Index of char a starting backwards from 3 is %d%n", testIndex.lastIndexOf('a', 3));
+    System.out.printf("Last Index of char a starting backwards from 3 is %d%n",
+        testIndex.lastIndexOf('a', 3));
 
     System.out.printf("First Index of string ab %d%n", testIndex.indexOf("ab"));
-    System.out.printf("First Index of string ab starting forwards from 3 is %d%n", testIndex.indexOf("ab", 3));
+    System.out.printf("First Index of string ab starting forwards from 3 is %d%n",
+        testIndex.indexOf("ab", 3));
     System.out.printf("Last Index of string ab %d%n", testIndex.lastIndexOf("ab"));
-    System.out.printf("Last Index of string ab starting backwards from 3 is %d%n", testIndex.lastIndexOf("ab", 3));
+    System.out.printf("Last Index of string ab starting backwards from 3 is %d%n",
+        testIndex.lastIndexOf("ab", 3));
+
+    String firstString = "first";
+    String secondString = "second";
+    System.out.println(firstString.compareTo(secondString));
   }
 
   public void stringBuilderCommonMethods() {

@@ -1,0 +1,19 @@
+
+n
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(©ƒ¦£8ÚÛŸ§Æ/
+N	java:S106"9Replace this use of System.out or System.err by a logger.(©ƒ¦£
+]	java:S125"<This block of commented-out lines of code should be removed.(¾àì›þÿÿÿÿ8›ÊŸ§Æ/
+Q	java:S125<"<This block of commented-out lines of code should be removed.(÷ê¬Ã
+Q	java:S125A"<This block of commented-out lines of code should be removed.(úñ­Ž
+c	java:S100p"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ÖŸà
+Z	java:S106y"9Replace this use of System.out or System.err by a logger.(³¾Äþÿÿÿÿ8ÜŸ§Æ/
+Q
+java:S1128"/Remove this unused import 'java.sql.SQLOutput'.(ê¤òÃùÿÿÿÿ8ëÏ§Æ/
+V
+java:S1128"4Remove this unused import 'java.util.PriorityQueue'.(ÆãÑþøÿÿÿÿ8Ð”ï©Æ/
+€
+java:S1319T"eThe type of "path" should be an interface such as "List" rather than the implementation "LinkedList".(‡Àžˆÿÿÿÿÿ
+[
+java:S2184,"ECast one of the operands of this subtraction operation to a "double".(ééï°
+g
+java:S21841"ECast one of the operands of this subtraction operation to a "double".(¡É×Œûÿÿÿÿ8ÂõÎ§Æ/
