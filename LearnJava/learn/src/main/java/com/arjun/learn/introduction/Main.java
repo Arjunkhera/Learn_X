@@ -1,98 +1,28 @@
 package com.arjun.learn.introduction;
 
+import java.util.List;
+
 public class Main {
 
   public static void main(String[] args) {
-    printing();
-    numericLiterals();
-    strings();
+    List<Integer> weights = List.of(5,10, 20, 30);
+    List<Integer> values = List.of(160, 110, 150, 50);
+
+    System.out.println(solve(weights, values, 20));
   }
 
-  // Printing
-  public static void printing() {
-    Printing printing = new Printing();
+  public static int solve(List<Integer> weights, List<Integer> values, int maxWeight) {
+    int[][] dp = new int[weights.size() + 1][maxWeight + 1];
 
-    System.out.print("-------------------------------");
-    System.out.printf("%n[START] Unformatted Output %n");
-    printing.unformattedPrinting();
-    System.out.printf("%n[END] Unformatted Output %n");
-
-    System.out.print("-------------------------------");
-    System.out.printf("%n[START] Formatted Output %n");
-    printing.formattedOutputPrintf();
-    System.out.printf("%n[END] Formatted Output %n");
-  }
-
-  // Numbers in different bases and their conversions with Strings
-  public static void numericLiterals() {
-    NumericLiterals numericLiterals = new NumericLiterals();
-
-    System.out.print("-------------------------------");
-    System.out.printf("%n[START] Converting Number to String %n");
-    numericLiterals.convertNumberToString();
-    System.out.printf("%n[END] Converting Number to String %n");
-
-    System.out.print("-------------------------------");
-    System.out.printf("%n[START] Converting String to Number %n");
-    numericLiterals.convertingStringToNumber();
-    System.out.printf("%n[END] Converting String to Number %n");
-
-    System.out.print("-------------------------------");
-    System.out.printf("%n[START] Get Binary Array from number 13 %n");
-    numericLiterals.getBinaryArrayFromNumber(13);
-    System.out.printf("%n[START] Get Binary Array from number -13 %n");
-    numericLiterals.getBinaryArrayFromNumber(-13);
-    System.out.printf("%n[END] Get Binary Array from number%n");
-
-  }
-
-  // String Introduction
-  public static void strings() {
-    Strings strings = new Strings();
-
-    System.out.print("-------------------------------");
-    System.out.printf("%n[START] String Introduction %n");
-    strings.introduction();
-    System.out.printf("%n[END] String Introduction %n");
-
-    System.out.print("-------------------------------");
-    System.out.printf("%n[START] String Initialisation %n");
-    strings.waysToInitialise();
-    System.out.printf("%n[END] String Initialisation %n");
-
-    System.out.print("-------------------------------");
-    System.out.printf("%n[START] String Common Methods %n");
-    strings.commonMethods();
-    System.out.printf("%n[END] String Common Methods %n");
-
-  }
-
-  // Enum Introduction
-  public static void enums() {
-    // Initialising an enum
-    Enum currentChargeLevel = Enum.FULL;
-
-    // accessing the name of enum
-    System.out.println(currentChargeLevel.name());
-
-    // accessing enum by its name
-    Enum previousChargeLevel = Enum.valueOf("LOW");
-
-    // listing all enum constants, values returns array of enums
-    for (Enum val : Enum.values()) {
-      System.out.println(val);
+    for(int i = 1; i <= weights.size(); i++) {
+      for(int j = 1; j <= maxWeight; j++) {
+        dp[i][j] = dp[i - 1][j];
+        if(j >= weights.get(i - 1))
+          dp[i][j] = Math.max(dp[i - 1][j], dp[i-1][j - weights.get(i - 1)] + values.get(i - 1));
+      }
     }
 
-    // returning the ordinal position of enum values
-    System.out.println(currentChargeLevel.ordinal());
-    System.out.println(Enum.MEDIUM.ordinal());
-
-    // comparing enums
-    System.out.println(previousChargeLevel.equals(Enum.LOW));
-    System.out.println(previousChargeLevel == Enum.LOW);
-
-    // printing field methods of enum
-    System.out.println(currentChargeLevel.getColor());
-    System.out.println(currentChargeLevel.getSections());
+    return dp[weights.size()][maxWeight];
   }
 }
+

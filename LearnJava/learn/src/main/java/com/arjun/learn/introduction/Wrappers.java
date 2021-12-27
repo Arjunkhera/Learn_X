@@ -31,7 +31,7 @@ public class Wrappers {
         // Factory methods : preferred due to caching benefits
         Integer third = Integer.valueOf(5);
         // For strings, we can use value of
-        Integer fourth = Integer. valueOf("5");
+        Integer fourth = Integer.valueOf("5");
         // or parseInt
         Integer fifth = Integer.parseInt("5");
     }

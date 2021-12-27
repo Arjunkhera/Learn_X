@@ -42,7 +42,6 @@ public class Traversal {
     public static List<Integer> InOrderMorris(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         TreeNode prev = null;
-
         while(root != null) {
             if(root.left == null) {
                 res.add(root.val);
