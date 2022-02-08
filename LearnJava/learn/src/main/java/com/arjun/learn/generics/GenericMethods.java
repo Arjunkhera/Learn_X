@@ -1,6 +1,4 @@
-package com.arjun.generics;
-
-import java.awt.print.Book;
+package com.arjun.learn.generics;
 
 public class GenericMethods {
 

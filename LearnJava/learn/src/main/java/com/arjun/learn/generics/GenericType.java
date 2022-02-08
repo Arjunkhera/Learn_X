@@ -1,4 +1,4 @@
-package com.arjun.generics;
+package com.arjun.learn.generics;
 
 class GenericType<T> {
 

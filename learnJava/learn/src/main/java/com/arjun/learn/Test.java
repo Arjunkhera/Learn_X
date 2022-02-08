@@ -15,7 +15,7 @@ public class Test {
     innerStaticClass.privateField = 3;
   }
 
-  public class InnerStaticClass {
+  static class InnerStaticClass {
     private int privateField;
     public int fieldName;
 

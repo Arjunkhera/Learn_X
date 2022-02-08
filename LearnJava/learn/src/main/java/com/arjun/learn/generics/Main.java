@@ -1,6 +1,7 @@
-package com.arjun.generics;
+package com.arjun.learn.generics;
 
 public class Main {
+
     public static void main(String[] args) {
         introduction();
         objectsAsGeneric();
@@ -30,10 +31,10 @@ public class Main {
     }
 
     public static void genericMethods() {
-        Integer[] array = { 1, 2, 3, 4 };
+        Integer[] array = {1, 2, 3, 4};
         int len = GenericMethods.length(array); // pass an array of Integer's
 
-        Character[] characters = { 'a', 'b', 'c' };
+        Character[] characters = {'a', 'b', 'c'};
         GenericMethods.print(characters);
 
         GenericMethods instance = new GenericMethods();

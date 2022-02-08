@@ -1,6 +1,6 @@
-package com.arjun.generics;
+package com.arjun.learn.generics;
 
-import com.arjun.generics.examples.SampleClasses;
+import com.arjun.learn.generics.examples.SampleClasses;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,89 +1,79 @@
 package com.arjun.learn;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.PriorityQueue;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
 
 class Solution {
 
-  class Pair {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int testCases = Integer.parseInt(scanner.nextLine());
 
-    int a;
-    int b;
+        for(int i = 0; i < testCases; i++) {
+            Union union = new Union(26);
+            String input = scanner.next();
 
-    Pair(int a, int b) {
-      this.a = a;
-      this.b = b;
+            int ops = scanner.nextInt();
+            for(int j = 0; j < ops; j++) {
+                String first = scanner.next();
+                String second = scanner.next();
+
+                union.combine(first.charAt(0) - 'a', second.charAt(0) - 'a');
+            }
+
+            Set<Integer> parents = new HashSet<>();
+            for(Character ch : input.toCharArray()) {
+                parents.add(union.find(ch - 'a'));
+            }
+
+            if (parents.size() > 1) {
+                System.out.println("NO");
+            } else {
+                System.out.println("YES");
+            }
+        }
     }
 
-  }
+    static class Union {
 
-  class The_Comparator implements Comparator<Pair> {
-    public int compare(Pair p1, Pair p2) {
-      return p2.b - p1.b;
-    }
-  }
+        private final int[] parent;
 
-  public int maxCompatibilitySum(int[][] students, int[][] mentors) {
-    int[] arr = new int[students.length];
-    HashMap<Integer, PriorityQueue<Pair>> h = new HashMap<>();
-    HashMap<Integer, Integer> blacklist = new HashMap<>();
+        public Union(int capacity) {
+            this.parent = new int[capacity];
 
-    for (int i = 0; i < students.length; i++) {
-      int[] s1 = students[i];
-      for (int j = 0; j < mentors.length; j++) {
-        int[] m1 = mentors[i];
-
-        int sum = 0;
-        for (int k = 0; k < s1.length; k++) {
-          if (s1[k] == m1[k]) {
-            sum++;
-          }
+            for (int i = 0; i < capacity; i++) {
+                this.parent[i] = -1;
+            }
         }
 
-        PriorityQueue<Pair> list = h.getOrDefault(i, new PriorityQueue<>());
-        list.add(new Pair(j, sum));
-        h.put(i, list);
-      }
-    }
+        public void combine(int a, int b) {
+            int parentA = find(a);
+            int parentB = find(b);
 
-    int res = 0;
-    while (true) {
-      boolean check = false;
-      for (int i = 0; i < students.length; i++) {
-        PriorityQueue<Pair> p = h.get(students[i]);
+            // nodes are in same set
+            if (parentA == parentB) {
+                return;
+            }
 
-        while (p.size() > 1 && blacklist.containsKey(p.peek().a)) {
-          p.remove();
+            // merge according to ranks
+            int rankA = parent[parentA];
+            int rankB = parent[parentB];
+            if (rankA <= rankB) {
+                parent[parentA] = rankA + rankB;
+                parent[parentB] = parentA;
+            } else {
+                parent[parentB] = rankA + rankB;
+                parent[parentA] = parentB;
+            }
         }
 
-        if (p.size() == 1) {
-          if (blacklist.containsKey(p.peek().a) && blacklist.get(p.peek().a) != i) {
-            p.remove();
-          } else {
-            blacklist.put(p.peek().a, i);
-          }
+        public int find(int node) {
+            if (parent[node] < 0) {
+                return node;
+            }
+            // compress the path
+            return parent[node] = find(parent[node]);
         }
-
-        if (p.size() == 1) {
-          check = true;
-        }
-
-        h.put(i, p);
-      }
-
-      if (!check) {
-        break;
-      }
-
     }
-
-    for (Map.Entry<Integer, PriorityQueue<Pair>> e : h.entrySet()) {
-      PriorityQueue<Pair> p = e.getValue();
-      res = res + ((p.size() == 0) ? 0 : p.peek().b);
-    }
-    return res;
-
-  }
 }

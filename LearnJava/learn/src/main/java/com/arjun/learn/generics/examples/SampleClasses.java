@@ -1,4 +1,4 @@
-package com.arjun.generics.examples;
+package com.arjun.learn.generics.examples;
 
 public class SampleClasses {
 
