@@ -6,14 +6,17 @@ import java.util.List;
 
 public class App {
   public static void main(String[] args) throws IOException {
+
+  }
+
+  private static void lambdaTest() {
     List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8);
 
     System.out.println(numbers.stream()
-        .filter(App::evenCheck)
-        .filter(App::gt3)
-        .map(App::doDouble)
-        .findFirst());
-
+            .filter(App::evenCheck)
+            .filter(App::gt3)
+            .map(App::doDouble)
+            .findFirst());
   }
 
   private static boolean evenCheck(int number) {
